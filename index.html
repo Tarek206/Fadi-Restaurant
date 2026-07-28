@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schami — Orientalische Küche</title>
+<meta name="description" content="Schami – Orientalische Küche. Levantinische Spezialitäten, Grillgerichte und Mezze, frisch und mit Leidenschaft zubereitet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-ar" aria-hidden="true">الشامي</span>
+      <span class="brand-text">
+        <span class="brand-name">Schami</span>
+        <span class="brand-sub">Orientalische Küche</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#speisekarte">Speisekarte</a>
+      <a href="#geschichte">Über uns</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#reservierung">Reservierung</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a href="#reservierung" class="btn btn-gold nav-cta">Tisch reservieren</a>
+
+    <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="assets/hero-grill-wide.jpg" alt="Gegrillte Lammkoteletts, Kofta und Mezze von Schami" loading="eager">
+    <div class="hero-scrim"></div>
+    <div class="hero-pattern" aria-hidden="true"></div>
+  </div>
+
+  <div class="wrap hero-content">
+    <p class="eyebrow"><span class="rule"></span>Damaszener Tradition seit Generationen</p>
+    <h1 class="hero-title">Der Geschmack<br>von <em>Damaskus</em></h1>
+    <p class="hero-lede">Bei Schami treffen die Aromen der levantinischen Küche auf Handwerk und Gastfreundschaft — Mezze, Grillspezialitäten und Familienrezepte, jeden Tag frisch zubereitet.</p>
+    <div class="hero-actions">
+      <a href="#speisekarte" class="btn btn-gold">Speisekarte ansehen</a>
+      <a href="#reservierung" class="btn btn-outline">Tisch reservieren</a>
+    </div>
+  </div>
+
+  <a href="#geschichte" class="scroll-cue" aria-label="Nach unten scrollen">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ LOGO DIVIDER 1 ============ -->
+<section class="brand-strip">
+  <img src="assets/banner-logo-grill.jpg" alt="Schami Logo mit Grillspezialitäten" loading="lazy">
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="story" id="geschichte">
+  <div class="wrap story-grid">
+    <div class="story-media">
+      <img src="assets/hero-logo-lamb.jpg" alt="Schami Logo mit flambierten Lammkoteletts">
+      <div class="story-media-frame" aria-hidden="true"></div>
+    </div>
+    <div class="story-copy">
+      <p class="eyebrow eyebrow-dark"><span class="rule"></span>Unsere Geschichte</p>
+      <h2>Handwerk, das man<br>schmeckt</h2>
+      <p>Der Name „Schami" verweist auf Damaskus, die Wiege der levantinischen Küche — Kräuter, Granatapfel, Sesam und Feuer, seit Generationen im Familienrezept verfeinert. Bei uns wird jedes Gericht von Hand vorbereitet: die Mezze frisch püriert, das Fleisch langsam mariniert, das Brot direkt aus dem Ofen serviert.</p>
+      <p>Unsere Küche steht für ehrliche Zutaten, offenes Feuer und die Gastfreundschaft, für die der Orient bekannt ist. Kommen Sie vorbei, probieren Sie sich durch unsere Mezze-Auswahl und lassen Sie sich vom Duft der Gewürze verführen.</p>
+      <div class="story-stats">
+        <div><span>100%</span>Halal &amp; frisch</div>
+        <div><span>+20</span>Mezze &amp; Vorspeisen</div>
+        <div><span>7</span>Tage geöffnet</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="menu" id="speisekarte">
+  <div class="wrap">
+    <p class="eyebrow"><span class="rule"></span>Speisekarte</p>
+    <h2 class="section-title">Unsere Klassiker</h2>
+    <p class="section-lede">Eine Auswahl unserer beliebtesten Gerichte — von kalten Mezze bis zum knusprigen Burger. Preise beispielhaft, vollständige Karte im Restaurant.</p>
+
+    <div class="menu-tabs" id="menuTabs">
+      <button class="tab-btn is-active" data-tab="mezze">Mezze &amp; Vorspeisen</button>
+      <button class="tab-btn" data-tab="grill">Vom Grill</button>
+      <button class="tab-btn" data-tab="burger">Burger</button>
+    </div>
+
+    <div class="menu-panels">
+      <div class="menu-panel is-active" data-panel="mezze">
+        <div class="dish-grid">
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/mezze-plate-cutout.jpg" alt="Hummus, Muhammara, Mutabal und Salat" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3>Mezze-Teller</h3><span class="price">14,50 €</span></div>
+              <p>Hummus, Muhammara, Mutabal und frischer Salat, serviert mit warmem Fladenbrot.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/ful-1.jpg" alt="Ful Medames mit frischen Kräutern" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3>Ful Medames</h3><span class="price">8,90 €</span></div>
+              <p>Geschmorte Saubohnen mit Olivenöl, Zitrone, Tomaten und Petersilie.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/fattoush.jpg" alt="Fattoush Salat mit gerösteten Brotchips" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3>Fattoush</h3><span class="price">9,50 €</span></div>
+              <p>Levantinischer Brotsalat mit Sumach, Granatapfelsirup und knusprigem Fladenbrot.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/labneh.jpg" alt="Gegrilltes Fladenbrot mit Zwiebel-Sumach-Salat" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3>Schami-Fladenbrot</h3><span class="price">7,50 €</span></div>
+              <p>Über Feuer gebackenes Fladenbrot mit Zwiebel-Sumach-Salat und Dips.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="grill">
+        <div class="dish-grid">
+          <article class="dish-card dish-card--wide">
+            <div class="dish-img"><img src="assets/lambchops-fire.jpg" alt="Flambierte Lammkoteletts" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3>Lammkoteletts vom Feuer</h3><span class="price">28,90 €</span></div>
+              <p>Marinierte Lammkoteletts, über offener Flamme gegrillt, mit Reis und Salat.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/chicken-rice-1.jpg" alt="Ofenhähnchen auf gewürztem Reis mit Nüssen" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3>Schami-Hähnchen</h3><span class="price">19,50 €</span></div>
+              <p>Ganzes Hähnchen, orientalisch gewürzt, auf safranfarbenem Reis mit Cashews.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/lamb-platter-2.jpg" alt="Lammplatte mit Reis und Nüssen" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3>Lammplatte „Mandi"</h3><span class="price">32,00 €</span></div>
+              <p>Zartes Lamm auf würzigem Reis, mit gerösteten Mandeln und Pinienkernen — ideal zum Teilen.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="burger">
+        <div class="dish-grid">
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/burger-1.jpg" alt="Crispy Chicken Burger" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3>Schami Crispy Chicken</h3><span class="price">12,90 €</span></div>
+              <p>Knusprig gebackenes Hähnchen, Sesambrötchen, Hausmarinade und frisches Gemüse.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/burger-2.jpg" alt="Beef Burger mit roten Zwiebeln" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3>Schami Beef Burger</h3><span class="price">13,90 €</span></div>
+              <p>Saftiges Rindfleisch-Patty, karamellisierte Röstzwiebeln, hausgemachte Soße.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGO DIVIDER 2 ============ -->
+<section class="brand-strip">
+  <img src="assets/banner-logo-mezze.jpg" alt="Schami Logo mit Mezze-Auswahl" loading="lazy">
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="galerie">
+  <div class="wrap">
+    <p class="eyebrow"><span class="rule"></span>Galerie</p>
+    <h2 class="section-title">Impressionen aus unserer Küche</h2>
+  </div>
+  <div class="gallery-grid" id="galleryGrid">
+    <img src="assets/mezze-1.jpg" alt="Mezze-Auswahl auf Messingtablett" loading="lazy">
+    <img src="assets/mezze-3.jpg" alt="Mezze-Schälchen mit Kichererbsen" loading="lazy">
+    <img src="assets/chicken-rice-closeup.jpg" alt="Nahaufnahme Hähnchen auf Reis" loading="lazy">
+    <img src="assets/ful-2.jpg" alt="Kichererbsen-Mezze in Schale" loading="lazy">
+    <img src="assets/lamb-platter-1.jpg" alt="Mezze-Auswahl mit Hummus und Kichererbsen" loading="lazy">
+    <img src="assets/ful-3.jpg" alt="Bohnen-Mezze mit Kräutern" loading="lazy">
+    <img src="assets/mezze-2.jpg" alt="Mezze-Tablett mit frischem Gemüse" loading="lazy">
+    <img src="assets/ful-4.jpg" alt="Ful Mezze mit Tomaten" loading="lazy">
+  </div>
+</section>
+
+<!-- ============ RESERVATION / CONTACT ============ -->
+<section class="reserve" id="reservierung">
+  <div class="wrap reserve-grid">
+    <div class="reserve-form-wrap">
+      <p class="eyebrow"><span class="rule"></span>Reservierung</p>
+      <h2 class="section-title">Reservieren Sie Ihren Tisch</h2>
+      <p class="section-lede">Füllen Sie das Formular aus und wir bestätigen Ihre Reservierung telefonisch oder per E-Mail.</p>
+
+      <form id="reserveForm" class="reserve-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name">
+        </div>
+        <div class="field">
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+49 ...">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="date">Datum</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="field">
+            <label for="time">Uhrzeit</label>
+            <input type="time" id="time" name="time" required>
+          </div>
+          <div class="field">
+            <label for="guests">Personen</label>
+            <select id="guests" name="guests">
+              <option>1</option><option>2</option><option selected>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7+</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Nachricht (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Allergien, Anlass, Wünsche ..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Reservierung anfragen</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+
+    <aside class="reserve-info" id="kontakt">
+      <p class="eyebrow eyebrow-light"><span class="rule"></span>Kontakt</p>
+      <h3>Schami — Orientalische Küche</h3>
+
+      <ul class="info-list">
+        <li>
+          <span class="info-label">Adresse</span>
+          Musterstraße 12, 12345 Musterstadt <em>(Platzhalter — bitte anpassen)</em>
+        </li>
+        <li>
+          <span class="info-label">Telefon</span>
+          <a href="tel:+490000000000">+49 (0) 000 000 00 00</a> <em>(Platzhalter)</em>
+        </li>
+        <li>
+          <span class="info-label">E-Mail</span>
+          <a href="mailto:info@schami-restaurant.de">info@schami-restaurant.de</a> <em>(Platzhalter)</em>
+        </li>
+      </ul>
+
+      <div class="hours">
+        <span class="info-label">Öffnungszeiten</span>
+        <div class="hours-row"><span>Mo – Fr</span><span>12:00 – 22:30</span></div>
+        <div class="hours-row"><span>Sa – So</span><span>13:00 – 23:00</span></div>
+        <p class="hours-note">(Platzhalter — bitte an tatsächliche Zeiten anpassen)</p>
+      </div>
+
+      <div class="map-frame" aria-hidden="true">
+        <div class="map-frame-inner">
+          <span>Kartenausschnitt hier einbetten</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a href="#top" class="brand brand--footer">
+      <span class="brand-ar" aria-hidden="true">الشامي</span>
+      <span class="brand-text">
+        <span class="brand-name">Schami</span>
+        <span class="brand-sub">Orientalische Küche</span>
+      </span>
+    </a>
+
+    <nav class="footer-nav">
+      <a href="#speisekarte">Speisekarte</a>
+      <a href="#geschichte">Über uns</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#reservierung">Reservierung</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 2.1.25 2.83.53a5.7 5.7 0 0 1 2.06 1.34 5.7 5.7 0 0 1 1.34 2.06c.28.73.48 1.66.53 2.83.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 2.1-.53 2.83a5.7 5.7 0 0 1-1.34 2.06 5.7 5.7 0 0 1-2.06 1.34c-.73.28-1.66.48-2.83.53-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-2.1-.25-2.83-.53a5.7 5.7 0 0 1-2.06-1.34 5.7 5.7 0 0 1-1.34-2.06c-.28-.73-.48-1.66-.53-2.83C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-2.1.53-2.83A5.7 5.7 0 0 1 4.14 2.26 5.7 5.7 0 0 1 6.2.92c.73-.28 1.66-.48 2.83-.53C10.28 2.2 10.68 2.2 12 2.2Zm0 1.98c-3.15 0-3.52 0-4.76.07-1.02.04-1.57.22-1.93.36-.49.19-.84.42-1.2.78-.36.36-.6.71-.79 1.2-.14.36-.32.91-.36 1.93-.06 1.24-.07 1.6-.07 4.76s0 3.52.07 4.76c.04 1.02.22 1.57.36 1.93.19.49.43.84.79 1.2.36.36.71.6 1.2.78.36.14.91.32 1.93.36 1.24.06 1.6.07 4.76.07s3.52 0 4.76-.07c1.02-.04 1.57-.22 1.93-.36.49-.18.84-.42 1.2-.78.36-.36.6-.71.79-1.2.14-.36.32-.91.36-1.93.06-1.24.07-1.6.07-4.76s0-3.52-.07-4.76c-.04-1.02-.22-1.57-.36-1.93a3.7 3.7 0 0 0-.79-1.2 3.7 3.7 0 0 0-1.2-.78c-.36-.14-.91-.32-1.93-.36-1.24-.07-1.61-.07-4.76-.07Zm0 3.4a5.42 5.42 0 1 1 0 10.84A5.42 5.42 0 0 1 12 7.58Zm0 1.98a3.44 3.44 0 1 0 0 6.88 3.44 3.44 0 0 0 0-6.88Zm5.63-2.2a1.27 1.27 0 1 1 0 2.53 1.27 1.27 0 0 1 0-2.53Z"/></svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M13.5 21.9v-8.1h2.72l.4-3.15h-3.12V8.66c0-.91.25-1.53 1.56-1.53h1.67V4.31A22.3 22.3 0 0 0 14.35 4.2c-2.4 0-4.04 1.46-4.04 4.15v2.3H7.58v3.15h2.73v8.1h3.19Z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Schami — Orientalische Küche. Alle Rechte vorbehalten.</p>
+    <p class="footer-fineprint">Inhalte, Adresse, Öffnungszeiten und Preise sind beispielhaft und sollten vor Veröffentlichung angepasst werden.</p>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Schließen">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
