@@ -32,11 +32,11 @@ tabButtons.forEach(btn => {
   });
 });
 
-// Gallery lightbox
+// Lightbox (gallery images + menu dish photos)
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const lightboxClose = document.getElementById('lightboxClose');
-document.querySelectorAll('.gallery-grid img').forEach(img => {
+document.querySelectorAll('.gallery-grid img, .dish-img img').forEach(img => {
   img.addEventListener('click', () => {
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
@@ -48,13 +48,46 @@ lightboxClose.addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
-// Reservation form (no backend — just confirms locally)
-const reserveForm = document.getElementById('reserveForm');
-const formNote = document.getElementById('formNote');
-reserveForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  formNote.textContent = 'Danke! Dies ist eine Demo-Seite — bitte ein echtes Buchungssystem oder Mailto-Handler anbinden.';
-});
-
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ---------------- Language switch (DE / AR) ----------------
+const LANG_KEY = 'schami-lang';
+let currentLang = localStorage.getItem(LANG_KEY) || 'de';
+
+const titleByLang = {
+  de: 'Schami — Orientalische Küche',
+  ar: 'الشامي — مطبخ شرقي'
+};
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('lang-ar', lang === 'ar');
+  document.title = titleByLang[lang];
+
+  document.querySelectorAll('[data-ar]').forEach(el => {
+    if (el.dataset.deHtml === undefined) el.dataset.deHtml = el.innerHTML;
+    el.innerHTML = lang === 'ar' ? el.dataset.ar : el.dataset.deHtml;
+  });
+
+  document.querySelectorAll('[data-ar-placeholder]').forEach(el => {
+    if (el.dataset.dePlaceholder === undefined) el.dataset.dePlaceholder = el.getAttribute('placeholder') || '';
+    el.setAttribute('placeholder', lang === 'ar' ? el.dataset.arPlaceholder : el.dataset.dePlaceholder);
+  });
+
+  document.querySelectorAll('[data-ar-aria-label]').forEach(el => {
+    if (el.dataset.deAriaLabel === undefined) el.dataset.deAriaLabel = el.getAttribute('aria-label') || '';
+    el.setAttribute('aria-label', lang === 'ar' ? el.dataset.arAriaLabel : el.dataset.deAriaLabel);
+  });
+
+  document.querySelectorAll('.lang-switch').forEach(sw => sw.setAttribute('data-active', lang));
+  localStorage.setItem(LANG_KEY, lang);
+}
+
+document.querySelectorAll('.lang-switch').forEach(sw => {
+  sw.addEventListener('click', () => applyLanguage(currentLang === 'de' ? 'ar' : 'de'));
+});
+
+applyLanguage(currentLang);

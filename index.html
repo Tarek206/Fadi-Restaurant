@@ -7,7 +7,7 @@
 <meta name="description" content="Schami – Orientalische Küche. Levantinische Spezialitäten, Grillgerichte und Mezze, frisch und mit Leidenschaft zubereitet.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,24 +18,32 @@
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <a href="#top" class="brand">
-      <span class="brand-ar" aria-hidden="true">الشامي</span>
+      <img src="assets/logo-mark.jpg" alt="Schami Logo" class="brand-logo">
       <span class="brand-text">
         <span class="brand-name">Schami</span>
-        <span class="brand-sub">Orientalische Küche</span>
+        <span class="brand-sub" data-ar="مطبخ شرقي">Orientalische Küche</span>
       </span>
     </a>
 
     <nav class="main-nav" id="mainNav">
-      <a href="#speisekarte">Speisekarte</a>
-      <a href="#geschichte">Über uns</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#reservierung">Reservierung</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#speisekarte" data-ar="القائمة">Speisekarte</a>
+      <a href="#geschichte" data-ar="من نحن">Über uns</a>
+      <a href="#galerie" data-ar="معرض الصور">Galerie</a>
+      <a href="#bewertungen" data-ar="التقييمات">Bewertungen</a>
+      <a href="#kontakt" data-ar="تواصل معنا">Kontakt</a>
+      <button type="button" class="lang-switch lang-switch--mobile" id="langSwitchMobile" aria-label="Sprache wechseln / تبديل اللغة">
+        <span class="lang-opt" data-lang="de">DE</span><span class="lang-opt" data-lang="ar">AR</span><span class="lang-thumb"></span>
+      </button>
+      <a href="#kontakt" class="btn btn-gold nav-cta-mobile" data-ar="تواصل معنا">Kontakt</a>
     </nav>
 
-    <a href="#reservierung" class="btn btn-gold nav-cta">Tisch reservieren</a>
+    <button type="button" class="lang-switch" id="langSwitch" aria-label="Sprache wechseln / تبديل اللغة">
+      <span class="lang-opt" data-lang="de">DE</span><span class="lang-opt" data-lang="ar">AR</span><span class="lang-thumb"></span>
+    </button>
 
-    <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false">
+    <a href="#kontakt" class="btn btn-gold nav-cta" data-ar="تواصل معنا">Kontakt</a>
+
+    <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" data-ar-aria-label="فتح القائمة">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -50,12 +58,12 @@
   </div>
 
   <div class="wrap hero-content">
-    <p class="eyebrow"><span class="rule"></span>Damaszener Tradition seit Generationen</p>
-    <h1 class="hero-title">Der Geschmack<br>von <em>Damaskus</em></h1>
-    <p class="hero-lede">Bei Schami treffen die Aromen der levantinischen Küche auf Handwerk und Gastfreundschaft — Mezze, Grillspezialitäten und Familienrezepte, jeden Tag frisch zubereitet.</p>
+    <p class="eyebrow"><span class="rule"></span><span data-ar="تقاليد دمشقية منذ أجيال">Damaszener Tradition seit Generationen</span></p>
+    <h1 class="hero-title" data-ar="مذاق دمشق الأصيل">Der Geschmack<br>von <em>Damaskus</em></h1>
+    <p class="hero-lede" data-ar="في الشامي، تلتقي نكهات المطبخ الشامي بالحرفية وكرم الضيافة، مقبلات ومشاوي ووصفات عائلية تُحضَّر طازجة كل يوم.">Bei Schami treffen die Aromen der levantinischen Küche auf Handwerk und Gastfreundschaft — Mezze, Grillspezialitäten und Familienrezepte, jeden Tag frisch zubereitet.</p>
     <div class="hero-actions">
-      <a href="#speisekarte" class="btn btn-gold">Speisekarte ansehen</a>
-      <a href="#reservierung" class="btn btn-outline">Tisch reservieren</a>
+      <a href="#speisekarte" class="btn btn-gold" data-ar="عرض القائمة">Speisekarte ansehen</a>
+      <a href="#kontakt" class="btn btn-outline" data-ar="تواصل معنا">Kontakt</a>
     </div>
   </div>
 
@@ -77,14 +85,14 @@
       <div class="story-media-frame" aria-hidden="true"></div>
     </div>
     <div class="story-copy">
-      <p class="eyebrow eyebrow-dark"><span class="rule"></span>Unsere Geschichte</p>
-      <h2>Handwerk, das man<br>schmeckt</h2>
-      <p>Der Name „Schami" verweist auf Damaskus, die Wiege der levantinischen Küche — Kräuter, Granatapfel, Sesam und Feuer, seit Generationen im Familienrezept verfeinert. Bei uns wird jedes Gericht von Hand vorbereitet: die Mezze frisch püriert, das Fleisch langsam mariniert, das Brot direkt aus dem Ofen serviert.</p>
-      <p>Unsere Küche steht für ehrliche Zutaten, offenes Feuer und die Gastfreundschaft, für die der Orient bekannt ist. Kommen Sie vorbei, probieren Sie sich durch unsere Mezze-Auswahl und lassen Sie sich vom Duft der Gewürze verführen.</p>
+      <p class="eyebrow eyebrow-dark"><span class="rule"></span><span data-ar="قصتنا">Unsere Geschichte</span></p>
+      <h2 data-ar="حرفية تُذاق في كل لقمة">Handwerk, das man<br>schmeckt</h2>
+      <p data-ar="اسم «الشامي» يُشير إلى دمشق، مهد المطبخ الشامي، الأعشاب والرمان والسمسم والنار، مُتقَنة منذ أجيال في وصفة العائلة. لدينا يُحضَّر كل طبق يدويًا: المقبلات تُهرس طازجة، اللحم يُتبَّل ببطء، والخبز يُقدَّم مباشرة من الفرن.">Der Name „Schami" verweist auf Damaskus, die Wiege der levantinischen Küche — Kräuter, Granatapfel, Sesam und Feuer, seit Generationen im Familienrezept verfeinert. Bei uns wird jedes Gericht von Hand vorbereitet: die Mezze frisch püriert, das Fleisch langsam mariniert, das Brot direkt aus dem Ofen serviert.</p>
+      <p data-ar="مطبخنا يقوم على مكوّنات صادقة ونار مفتوحة وكرم الضيافة الذي يشتهر به الشرق. تفضّلوا بزيارتنا، جرّبوا تشكيلة المقبلات لدينا، ودعوا رائحة التوابل تأسركم.">Unsere Küche steht für ehrliche Zutaten, offenes Feuer und die Gastfreundschaft, für die der Orient bekannt ist. Kommen Sie vorbei, probieren Sie sich durch unsere Mezze-Auswahl und lassen Sie sich vom Duft der Gewürze verführen.</p>
       <div class="story-stats">
-        <div><span>100%</span>Halal &amp; frisch</div>
-        <div><span>+20</span>Mezze &amp; Vorspeisen</div>
-        <div><span>7</span>Tage geöffnet</div>
+        <div><span>100%</span><span data-ar="حلال وطازج">Halal &amp; frisch</span></div>
+        <div><span>+20</span><span data-ar="مقبلات ومزة">Mezze &amp; Vorspeisen</span></div>
+        <div><span>7</span><span data-ar="أيام مفتوح أسبوعيًا">Tage geöffnet</span></div>
       </div>
     </div>
   </div>
@@ -93,14 +101,14 @@
 <!-- ============ MENU ============ -->
 <section class="menu" id="speisekarte">
   <div class="wrap">
-    <p class="eyebrow"><span class="rule"></span>Speisekarte</p>
-    <h2 class="section-title">Unsere Klassiker</h2>
-    <p class="section-lede">Eine Auswahl unserer beliebtesten Gerichte — von kalten Mezze bis zum knusprigen Burger. Preise beispielhaft, vollständige Karte im Restaurant.</p>
+    <p class="eyebrow"><span class="rule"></span><span data-ar="قائمة الطعام">Speisekarte</span></p>
+    <h2 class="section-title" data-ar="أطباقنا المميزة">Unsere Klassiker</h2>
+    <p class="section-lede" data-ar="تشكيلة من أشهى أطباقنا، من المقبلات الباردة إلى البرغر المقرمش. الأسعار توضيحية، القائمة الكاملة متوفرة في المطعم.">Eine Auswahl unserer beliebtesten Gerichte — von kalten Mezze bis zum knusprigen Burger. Preise beispielhaft, vollständige Karte im Restaurant.</p>
 
     <div class="menu-tabs" id="menuTabs">
-      <button class="tab-btn is-active" data-tab="mezze">Mezze &amp; Vorspeisen</button>
-      <button class="tab-btn" data-tab="grill">Vom Grill</button>
-      <button class="tab-btn" data-tab="burger">Burger</button>
+      <button class="tab-btn is-active" data-tab="mezze" data-ar="مقبلات ومزة">Mezze &amp; Vorspeisen</button>
+      <button class="tab-btn" data-tab="grill" data-ar="من الشواء">Vom Grill</button>
+      <button class="tab-btn" data-tab="burger" data-ar="برجر">Burger</button>
     </div>
 
     <div class="menu-panels">
@@ -109,29 +117,81 @@
           <article class="dish-card">
             <div class="dish-img"><img src="assets/mezze-plate-cutout.jpg" alt="Hummus, Muhammara, Mutabal und Salat" loading="lazy"></div>
             <div class="dish-body">
-              <div class="dish-head"><h3>Mezze-Teller</h3><span class="price">14,50 €</span></div>
-              <p>Hummus, Muhammara, Mutabal und frischer Salat, serviert mit warmem Fladenbrot.</p>
+              <div class="dish-head"><h3 data-ar="مقبلات مشكلة">Mezze-Teller</h3><span class="price">14,50 €</span></div>
+              <p data-ar="حمص، محمرة، متبل وسلطة طازجة، تُقدَّم مع خبز دافئ.">Hummus, Muhammara, Mutabal und frischer Salat, serviert mit warmem Fladenbrot.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="حمص، طحينة، باذنجان، جوز، زيت زيتون، خبز">Kichererbsen, Tahini, Auberginen, Walnüsse, Olivenöl, Fladenbrot</span></p>
             </div>
           </article>
           <article class="dish-card">
             <div class="dish-img"><img src="assets/ful-1.jpg" alt="Ful Medames mit frischen Kräutern" loading="lazy"></div>
             <div class="dish-body">
-              <div class="dish-head"><h3>Ful Medames</h3><span class="price">8,90 €</span></div>
-              <p>Geschmorte Saubohnen mit Olivenöl, Zitrone, Tomaten und Petersilie.</p>
+              <div class="dish-head"><h3 data-ar="فول مدمس">Ful Medames</h3><span class="price">8,90 €</span></div>
+              <p data-ar="فول مطهو ببطء مع زيت الزيتون والليمون والطماطم والبقدونس.">Geschmorte Saubohnen mit Olivenöl, Zitrone, Tomaten und Petersilie.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="فول، زيت زيتون، ثوم، ليمون، طماطم، بقدونس، كمون">Saubohnen, Olivenöl, Knoblauch, Zitrone, Tomaten, Petersilie, Kreuzkümmel</span></p>
             </div>
           </article>
           <article class="dish-card">
             <div class="dish-img"><img src="assets/fattoush.jpg" alt="Fattoush Salat mit gerösteten Brotchips" loading="lazy"></div>
             <div class="dish-body">
-              <div class="dish-head"><h3>Fattoush</h3><span class="price">9,50 €</span></div>
-              <p>Levantinischer Brotsalat mit Sumach, Granatapfelsirup und knusprigem Fladenbrot.</p>
+              <div class="dish-head"><h3 data-ar="فتوش">Fattoush</h3><span class="price">9,50 €</span></div>
+              <p data-ar="سلطة خبز شامية بالسماق ودبس الرمان وخبز مقرمش.">Levantinischer Brotsalat mit Sumach, Granatapfelsirup und knusprigem Fladenbrot.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="خس، خيار، طماطم، فجل، خبز محمص، سماق، دبس رمان، نعناع">Salat, Gurke, Tomaten, Radieschen, geröstetes Fladenbrot, Sumach, Granatapfelsirup, Minze</span></p>
             </div>
           </article>
           <article class="dish-card">
             <div class="dish-img"><img src="assets/labneh.jpg" alt="Gegrilltes Fladenbrot mit Zwiebel-Sumach-Salat" loading="lazy"></div>
             <div class="dish-body">
-              <div class="dish-head"><h3>Schami-Fladenbrot</h3><span class="price">7,50 €</span></div>
-              <p>Über Feuer gebackenes Fladenbrot mit Zwiebel-Sumach-Salat und Dips.</p>
+              <div class="dish-head"><h3 data-ar="خبز الشامي بالبصل والسماق">Schami-Fladenbrot</h3><span class="price">7,50 €</span></div>
+              <p data-ar="خبز مخبوز على النار مع سلطة البصل والسماق وصلصات متنوعة.">Über Feuer gebackenes Fladenbrot mit Zwiebel-Sumach-Salat und Dips.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="خبز، بصل أحمر، سماق، بقدونس، ليمون، طحينة">Fladenbrot, rote Zwiebeln, Sumach, Petersilie, Zitrone, Tahini</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/hummus-bowl.jpg" alt="Hummus in traditioneller Schale" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="حمص">Hummus</h3><span class="price">7,90 €</span></div>
+              <p data-ar="حمص كريمي بالطحينة وزيت الزيتون والفلفل الحلو.">Cremiges Kichererbsenpüree mit Tahini, Olivenöl und Paprika.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="حمص، طحينة، ليمون، ثوم، زيت زيتون، بابريكا">Kichererbsen, Tahini, Zitrone, Knoblauch, Olivenöl, Paprikapulver</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/mutabal.jpg" alt="Mutabal in Tonschale" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="متبل باذنجان">Mutabal</h3><span class="price">8,50 €</span></div>
+              <p data-ar="متبل باذنجان مدخن بالطحينة وحب الرمان والصنوبر.">Rauchige Auberginencreme mit Tahini, Granatapfelkernen und Pinienkernen.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="باذنجان، طحينة، ثوم، ليمون، حب رمان، زيت زيتون">Auberginen, Tahini, Knoblauch, Zitrone, Granatapfelkerne, Olivenöl</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/falafel-catalog.jpg" alt="Falafel mit Joghurtdip" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="فلافل">Falafel</h3><span class="price">8,90 €</span></div>
+              <p data-ar="كرات الحمص المقرمشة، محضّرة منزليًا، مع صلصة اللبن والطحينة.">Knusprige Kichererbsenbällchen, hausgemacht, mit Joghurt-Tahini-Dip.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="حمص، بصل، ثوم، بقدونس، كزبرة، كمون، سمسم">Kichererbsen, Zwiebeln, Knoblauch, Petersilie, Koriander, Kreuzkümmel, Sesam</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/tabbouleh-catalog.jpg" alt="Tabouleh Petersiliensalat" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="تبولة">Tabouleh</h3><span class="price">8,50 €</span></div>
+              <p data-ar="بقدونس مفروم ناعمًا مع برغل وطماطم ونعناع وليمون.">Fein gehackte Petersilie mit Bulgur, Tomaten, Minze und Zitrone.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="بقدونس، برغل، طماطم، بصل، نعناع، عصير ليمون، زيت زيتون">Petersilie, Bulgur, Tomaten, Zwiebeln, Minze, Zitronensaft, Olivenöl</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/fatayer.jpg" alt="Fatayer Spinattaschen" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="فطاير سبانخ">Fatayer</h3><span class="price">7,50 €</span></div>
+              <p data-ar="فطائر مقرمشة محشوة بالسبانخ والبصل وجبنة الفيتا.">Knusprige Teigtaschen, gefüllt mit Spinat, Zwiebeln und Feta.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="عجين، سبانخ، بصل، جبنة فيتا، سماق، زيت زيتون">Blätterteig, Spinat, Zwiebeln, Feta, Sumach, Olivenöl</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/kibbeh-fried.jpg" alt="Kibbeh mit Minze und Dip" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="كبة مقلية">Kibbeh</h3><span class="price">9,50 €</span></div>
+              <p data-ar="كبة مقلية محشوة بلحم مفروم متبّل، تُقدَّم مع صلصة اللبن.">Frittierte Bulgurtaschen mit gewürztem Hackfleisch, serviert mit Joghurtdip.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="برغل، لحم بقري مفروم، بصل، صنوبر، بهارات شرقية">Bulgur, Rinderhackfleisch, Zwiebeln, Pinienkerne, orientalische Gewürze</span></p>
             </div>
           </article>
         </div>
@@ -142,22 +202,71 @@
           <article class="dish-card dish-card--wide">
             <div class="dish-img"><img src="assets/lambchops-fire.jpg" alt="Flambierte Lammkoteletts" loading="lazy"></div>
             <div class="dish-body">
-              <div class="dish-head"><h3>Lammkoteletts vom Feuer</h3><span class="price">28,90 €</span></div>
-              <p>Marinierte Lammkoteletts, über offener Flamme gegrillt, mit Reis und Salat.</p>
+              <div class="dish-head"><h3 data-ar="ريش غنم مشوية">Lammkoteletts vom Feuer</h3><span class="price">28,90 €</span></div>
+              <p data-ar="ريش غنم متبّلة، مشوية على نار مفتوحة، تُقدَّم مع الأرز والسلطة.">Marinierte Lammkoteletts, über offener Flamme gegrillt, mit Reis und Salat.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="ريش غنم، إكليل الجبل، ثوم، بهارات شرقية، زيت زيتون">Lammkoteletts, Rosmarin, Knoblauch, orientalische Gewürzmischung, Olivenöl</span></p>
             </div>
           </article>
           <article class="dish-card">
             <div class="dish-img"><img src="assets/chicken-rice-1.jpg" alt="Ofenhähnchen auf gewürztem Reis mit Nüssen" loading="lazy"></div>
             <div class="dish-body">
-              <div class="dish-head"><h3>Schami-Hähnchen</h3><span class="price">19,50 €</span></div>
-              <p>Ganzes Hähnchen, orientalisch gewürzt, auf safranfarbenem Reis mit Cashews.</p>
+              <div class="dish-head"><h3 data-ar="دجاج الشامي بالأرز">Schami-Hähnchen</h3><span class="price">19,50 €</span></div>
+              <p data-ar="دجاجة كاملة متبّلة بالبهارات الشرقية على أرز بالزعفران مع الكاجو.">Ganzes Hähnchen, orientalisch gewürzt, auf safranfarbenem Reis mit Cashews.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="دجاج، أرز بالزعفران، كاجو، بصل، زبدة، بهارات شرقية">Hähnchen, Safranreis, Cashewkerne, Zwiebeln, Butter, orientalische Gewürze</span></p>
             </div>
           </article>
           <article class="dish-card">
             <div class="dish-img"><img src="assets/lamb-platter-2.jpg" alt="Lammplatte mit Reis und Nüssen" loading="lazy"></div>
             <div class="dish-body">
-              <div class="dish-head"><h3>Lammplatte „Mandi"</h3><span class="price">32,00 €</span></div>
-              <p>Zartes Lamm auf würzigem Reis, mit gerösteten Mandeln und Pinienkernen — ideal zum Teilen.</p>
+              <div class="dish-head"><h3 data-ar="مندي لحم">Lammplatte „Mandi“</h3><span class="price">32,00 €</span></div>
+              <p data-ar="لحم غنم طري على أرز متبّل، مع لوز محمص وصنوبر، مثالي للمشاركة.">Zartes Lamm auf würzigem Reis, mit gerösteten Mandeln und Pinienkernen — ideal zum Teilen.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="لحم غنم، أرز مندي، لوز، صنوبر، قرفة، هيل">Lammfleisch, Mandi-Reis, Mandeln, Pinienkerne, Zimt, Kardamom</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/kofta-skewers.jpg" alt="Kofta-Spieße vom Grill" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="كفتة مشوية">Kofta-Spieße</h3><span class="price">17,50 €</span></div>
+              <p data-ar="أسياخ كفتة متبّلة مشوية مع البصل والبقدونس.">Gewürzte Hackfleischspieße vom Grill mit Zwiebeln und Petersilie.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="لحم بقري مفروم، بصل، بقدونس، فلفل حلو، بهارات شرقية">Rinderhackfleisch, Zwiebeln, Petersilie, Paprika, orientalische Gewürze</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/chicken-thighs-grilled.jpg" alt="Gegrillte Hähnchenschenkel" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="دجاج مشوي">Gegrilltes Hähnchen</h3><span class="price">16,90 €</span></div>
+              <p data-ar="أفخاذ دجاج متبّلة ومشوية على نار مفتوحة.">Hähnchenschenkel, mariniert und über offener Flamme gegrillt.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="أفخاذ دجاج، تتبيلة لبن، ثوم، بابريكا، ليمون">Hähnchenschenkel, Joghurt-Marinade, Knoblauch, Paprika, Zitrone</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/whole-chicken-grilled.jpg" alt="Ganzes Hähnchen vom Grill mit Zitrone" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="فروج كامل مشوي">Ganzes Hähnchen vom Grill</h3><span class="price">22,90 €</span></div>
+              <p data-ar="دجاجة كاملة مشوية على الفحم، تُقدَّم مع الليمون الطازج.">Ganzes Hähnchen, über Kohle gegrillt, mit frischer Zitrone serviert.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="دجاج كامل، ليمون، ثوم، بهارات شرقية، زيت زيتون">Hähnchen, Zitrone, Knoblauch, orientalische Gewürze, Olivenöl</span></p>
+            </div>
+          </article>
+          <article class="dish-card dish-card--wide">
+            <div class="dish-img"><img src="assets/menu-extra/mixed-grill-skewers.jpg" alt="Gemischter Grillteller mit Spießen" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="مشاوي مشكلة">Gemischter Grillteller</h3><span class="price">26,50 €</span></div>
+              <p data-ar="تشكيلة من أسياخ الشواء مع البطاطا والخضار وصلصة الثوم، للشهية المفتوحة.">Auswahl an Grillspießen mit Kartoffeln, Gemüse und Knoblauchsoße — für den großen Hunger.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="لحم بقري، دجاج، لحم غنم، بطاطا، صلصة ثوم، خضار مشوية">Rind, Hähnchen, Lamm, Kartoffeln, Knoblauchsoße, gegrilltes Gemüse</span></p>
+            </div>
+          </article>
+          <article class="dish-card dish-card--noimg">
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="طبق شاورما">Schawarma-Teller</h3><span class="price">13,90 €</span></div>
+              <p data-ar="دجاج طري من السيخ الدوار، يُقدَّم مع البطاطا والسلطة وصلصة الثوم.">Zartes Hähnchen vom Drehspieß, mit Pommes, Salat und Knoblauchsoße.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="دجاج شاورما، بطاطا مقلية، سلطة، طماطم، صلصة ثوم، بهارات شرقية">Hähnchen, Pommes, Salat, Tomaten, Knoblauchsoße, orientalische Gewürze</span></p>
+            </div>
+          </article>
+          <article class="dish-card dish-card--noimg">
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="شاورما بالخبز">Schawarma im Fladenbrot</h3><span class="price">8,90 €</span></div>
+              <p data-ar="شاورما دجاج مقرمشة في خبز دافئ، مع سلطة وصلصات منزلية.">Knuspriges Schawarma-Hähnchen im warmen Fladenbrot, mit Salat und hausgemachten Soßen.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="خبز، دجاج شاورما، سلطة، بصل، صلصة ثوم، صلصة حارة">Fladenbrot, Hähnchen, Salat, Zwiebeln, Knoblauchsoße, Chilisoße</span></p>
             </div>
           </article>
         </div>
@@ -168,15 +277,25 @@
           <article class="dish-card">
             <div class="dish-img"><img src="assets/burger-1.jpg" alt="Crispy Chicken Burger" loading="lazy"></div>
             <div class="dish-body">
-              <div class="dish-head"><h3>Schami Crispy Chicken</h3><span class="price">12,90 €</span></div>
-              <p>Knusprig gebackenes Hähnchen, Sesambrötchen, Hausmarinade und frisches Gemüse.</p>
+              <div class="dish-head"><h3 data-ar="برجر دجاج مقرمش">Schami Crispy Chicken</h3><span class="price">12,90 €</span></div>
+              <p data-ar="دجاج مقرمش، خبز بالسمسم، صلصة خاصة وخضار طازجة.">Knusprig gebackenes Hähnchen, Sesambrötchen, Hausmarinade und frisches Gemüse.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="صدر دجاج مقرمش، خبز بالسمسم، خس، طماطم، بصل أحمر، صلصة خاصة">Hähnchenbrust (paniert), Sesambrötchen, Salat, Tomaten, rote Zwiebeln, Hausmarinade</span></p>
             </div>
           </article>
           <article class="dish-card">
             <div class="dish-img"><img src="assets/burger-2.jpg" alt="Beef Burger mit roten Zwiebeln" loading="lazy"></div>
             <div class="dish-body">
-              <div class="dish-head"><h3>Schami Beef Burger</h3><span class="price">13,90 €</span></div>
-              <p>Saftiges Rindfleisch-Patty, karamellisierte Röstzwiebeln, hausgemachte Soße.</p>
+              <div class="dish-head"><h3 data-ar="برجر لحم">Schami Beef Burger</h3><span class="price">13,90 €</span></div>
+              <p data-ar="قرص لحم بقري طري، بصل مكرمل، وصلصة منزلية.">Saftiges Rindfleisch-Patty, karamellisierte Röstzwiebeln, hausgemachte Soße.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="لحم بقري مفروم، خبز بالسمسم، بصل مقلي، خس، طماطم، صلصة خاصة">Rinderhackfleisch, Sesambrötchen, Röstzwiebeln, Salat, Tomaten, Hausmarinade</span></p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <div class="dish-img"><img src="assets/menu-extra/chicken-tenders.jpg" alt="Knusprige Chicken Tenders mit Dips" loading="lazy"></div>
+            <div class="dish-body">
+              <div class="dish-head"><h3 data-ar="أصابع دجاج مقرمشة">Chicken Tenders</h3><span class="price">11,90 €</span></div>
+              <p data-ar="أصابع دجاج مقرمشة مع البطاطا المقلية وثلاث صلصات منزلية.">Knusprige Hähnchenstreifen mit Pommes und drei hausgemachten Dips.</p>
+              <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span class="ing-value" data-ar="صدر دجاج مقرمش، بطاطا مقلية، ثلاث صلصات خاصة">Hähnchenbrust (paniert), Pommes, drei hausgemachte Dips</span></p>
             </div>
           </article>
         </div>
@@ -193,94 +312,109 @@
 <!-- ============ GALLERY ============ -->
 <section class="gallery" id="galerie">
   <div class="wrap">
-    <p class="eyebrow"><span class="rule"></span>Galerie</p>
-    <h2 class="section-title">Impressionen aus unserer Küche</h2>
+    <p class="eyebrow"><span class="rule"></span><span data-ar="معرض الصور">Galerie</span></p>
+    <h2 class="section-title" data-ar="لمحات من مطبخنا">Impressionen aus unserer Küche</h2>
   </div>
   <div class="gallery-grid" id="galleryGrid">
     <img src="assets/mezze-1.jpg" alt="Mezze-Auswahl auf Messingtablett" loading="lazy">
-    <img src="assets/mezze-3.jpg" alt="Mezze-Schälchen mit Kichererbsen" loading="lazy">
+    <img src="assets/hero-burgers-wide.jpg" alt="Beef Burger und Crispy Chicken Burger nebeneinander" loading="lazy">
     <img src="assets/chicken-rice-closeup.jpg" alt="Nahaufnahme Hähnchen auf Reis" loading="lazy">
     <img src="assets/ful-2.jpg" alt="Kichererbsen-Mezze in Schale" loading="lazy">
     <img src="assets/lamb-platter-1.jpg" alt="Mezze-Auswahl mit Hummus und Kichererbsen" loading="lazy">
-    <img src="assets/ful-3.jpg" alt="Bohnen-Mezze mit Kräutern" loading="lazy">
+    <img src="assets/gallery/bohnen-mezze.jpg" alt="Bohnen-Mezze mit Tomaten und Petersilie" loading="lazy">
     <img src="assets/mezze-2.jpg" alt="Mezze-Tablett mit frischem Gemüse" loading="lazy">
     <img src="assets/ful-4.jpg" alt="Ful Mezze mit Tomaten" loading="lazy">
+    <img src="assets/gallery/mezze-tray-falafel.jpg" alt="Falafel und Mezze-Auswahl auf Messingtablett" loading="lazy">
+    <img src="assets/gallery/chicken-rice-macro.jpg" alt="Nahaufnahme Hähnchenschenkel auf Gewürzreis" loading="lazy">
+    <img src="assets/gallery/shorba-bowl.jpg" alt="Linsensuppe mit Oliven und Kichererbsen" loading="lazy">
+    <img src="assets/gallery/salat-bowl.jpg" alt="Frischer Krautsalat in Schale" loading="lazy">
+    <img src="assets/gallery/kibbeh-teller.jpg" alt="Frittierte Kibbeh auf Teller" loading="lazy">
+    <img src="assets/gallery/mezze-5bowls-a.jpg" alt="Fünf Mezze-Schälchen auf Messingtablett" loading="lazy">
+    <img src="assets/gallery/logo-lammkoteletts-b.jpg" alt="Schami Logo mit flambierten Lammkoteletts" loading="lazy">
+    <img src="assets/gallery/falafel-brotkorb.jpg" alt="Falafel-Teller mit Brotkorb und Zitronen" loading="lazy">
+    <img src="assets/gallery/grillteller-wide.jpg" alt="Lammkoteletts, Kofta und Dips auf Grillteller" loading="lazy">
+    <img src="assets/gallery/burger-duo-hell.jpg" alt="Zwei Burger mit Dips und Gemüse" loading="lazy">
+    <img src="assets/gallery/lamm-reis-macro.jpg" alt="Nahaufnahme Lamm auf Gewürzreis mit Nüssen" loading="lazy">
+    <img src="assets/gallery/mezze-4bowls-suppe.jpg" alt="Mezze-Schälchen und Suppe auf Messingtablett" loading="lazy">
+    <img src="assets/gallery/logo-lammkoteletts-c.jpg" alt="Schami Logo mit gegrillten Lammkoteletts" loading="lazy">
+    <img src="assets/gallery/logo-mandi-banner.jpg" alt="Schami Logo mit Lamm- und Hähnchen-Mandi" loading="lazy">
+    <img src="assets/gallery/ful-nahaufnahme.jpg" alt="Ful Medames Nahaufnahme" loading="lazy">
+    <img src="assets/gallery/mezze-6bowls.jpg" alt="Sechs Mezze-Schälchen mit eingelegtem Gemüse" loading="lazy">
+    <img src="assets/gallery/kofta-teller-sauce.jpg" alt="Kofta vom Grill mit Tomatensauce und Dips" loading="lazy">
+    <img src="assets/gallery/burger-duo-stein.jpg" alt="Zwei Burger auf Schieferplatte" loading="lazy">
+    <img src="assets/gallery/logo-burger-beef.jpg" alt="Schami Logo mit Beef Burger" loading="lazy">
+    <img src="assets/gallery/logo-burger-chicken.jpg" alt="Schami Logo mit Crispy Chicken Burger" loading="lazy">
+    <img src="assets/gallery/hummus-fladenbrot.jpg" alt="Hummus mit warmem Fladenbrot" loading="lazy">
+    <img src="assets/gallery/tabouleh-bowl.jpg" alt="Tabouleh in dunkler Schale" loading="lazy">
+    <img src="assets/gallery/kofta-flatbread-rot.jpg" alt="Kofta auf Fladenbrot mit Pommes" loading="lazy">
+    <img src="assets/gallery/lamm-reis-tablett.jpg" alt="Lammplatte auf Messingtablett in der Küche" loading="lazy">
+    <img src="assets/gallery/mezze-5bowls-b.jpg" alt="Mezze-Schälchen mit eingelegtem Gemüse" loading="lazy">
+    <img src="assets/gallery/kofta-teller-weiss.jpg" alt="Kofta vom Grill auf weißem Teller" loading="lazy">
+    <img src="assets/gallery/logo-mezze-banner-b.jpg" alt="Schami Logo mit Falafel und Mezze" loading="lazy">
+    <img src="assets/gallery/lamm-reis-kueche.jpg" alt="Lammplatte in der Restaurantküche" loading="lazy">
+    <img src="assets/gallery/salat-bowl-b.jpg" alt="Frischer Salat mit Karotte und Gurke" loading="lazy">
+    <img src="assets/gallery/mezze-5bowls-c.jpg" alt="Mezze-Auswahl mit Granatapfel und Nüssen" loading="lazy">
   </div>
 </section>
 
-<!-- ============ RESERVATION / CONTACT ============ -->
-<section class="reserve" id="reservierung">
-  <div class="wrap reserve-grid">
-    <div class="reserve-form-wrap">
-      <p class="eyebrow"><span class="rule"></span>Reservierung</p>
-      <h2 class="section-title">Reservieren Sie Ihren Tisch</h2>
-      <p class="section-lede">Füllen Sie das Formular aus und wir bestätigen Ihre Reservierung telefonisch oder per E-Mail.</p>
-
-      <form id="reserveForm" class="reserve-form" novalidate>
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name">
-        </div>
-        <div class="field">
-          <label for="phone">Telefon</label>
-          <input type="tel" id="phone" name="phone" required placeholder="+49 ...">
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="date">Datum</label>
-            <input type="date" id="date" name="date" required>
-          </div>
-          <div class="field">
-            <label for="time">Uhrzeit</label>
-            <input type="time" id="time" name="time" required>
-          </div>
-          <div class="field">
-            <label for="guests">Personen</label>
-            <select id="guests" name="guests">
-              <option>1</option><option>2</option><option selected>3</option><option>4</option>
-              <option>5</option><option>6</option><option>7+</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label for="message">Nachricht (optional)</label>
-          <textarea id="message" name="message" rows="3" placeholder="Allergien, Anlass, Wünsche ..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-gold btn-block">Reservierung anfragen</button>
-        <p class="form-note" id="formNote" role="status"></p>
-      </form>
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="bewertungen">
+  <div class="wrap reviews-grid">
+    <div class="reviews-summary">
+      <p class="eyebrow"><span class="rule"></span><span data-ar="التقييمات">Bewertungen</span></p>
+      <h2 class="section-title" data-ar="ماذا يقول ضيوفنا">Was unsere Gäste sagen</h2>
+      <div class="rating-stat">
+        <span class="rating-number">4,4</span>
+        <span class="rating-stars" aria-hidden="true">★★★★★</span>
+        <span class="rating-count" data-ar="234 تقييم على جوجل">234 Google-Bewertungen</span>
+      </div>
+      <p class="section-lede" data-ar="يشيد ضيوفنا بشكل خاص بالطاقم الودود والتحضير السريع ونسبة السعر إلى الجودة الممتازة، ويُعد الفلافل والشاورما من أكثر الأطباق مدحًا.">Unsere Gäste loben besonders das freundliche Team, die schnelle Zubereitung und das ausgezeichnete Preis-Leistungs-Verhältnis — Falafel und Schawarma gehören zu den meistgelobten Gerichten.</p>
+      <a class="btn btn-outline" data-ar="جميع التقييمات على جوجل"
+         href="https://www.google.com/maps/place/Shami/@51.3459872,12.3969119,17z/data=!3m1!4b1!4m6!3m5!1s0x47a6f96f50a36e0d:0x5406423d2a9aa4c3!8m2!3d51.3459839!4d12.3994868!16s%2Fg%2F11hdxjpnn2"
+         target="_blank" rel="noopener">Alle Bewertungen auf Google lesen</a>
     </div>
 
-    <aside class="reserve-info" id="kontakt">
-      <p class="eyebrow eyebrow-light"><span class="rule"></span>Kontakt</p>
-      <h3>Schami — Orientalische Küche</h3>
+    <blockquote class="review-quote">
+      <p data-ar="«نادرًا ما تناولت طعامًا بهذه الجودة!»">„Habe selten so gutes Essen gegessen!"</p>
+      <cite data-ar="— تقييم من جوجل">— Google-Bewertung</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="reserve" id="kontakt">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light"><span class="rule"></span><span data-ar="تواصل معنا">Kontakt</span></p>
+    <h2 class="section-title" data-ar="تفضّلوا بزيارتنا">Besuchen Sie uns</h2>
+    <p class="section-lede" data-ar="العنوان وساعات العمل وجميع طرق التواصل في مكان واحد.">Adresse, Öffnungszeiten und alle Kontaktmöglichkeiten auf einen Blick.</p>
+
+    <aside class="reserve-info">
+      <h3 data-ar="الشامي — مطبخ شرقي">Schami — Orientalische Küche</h3>
 
       <ul class="info-list">
         <li>
-          <span class="info-label">Adresse</span>
-          Musterstraße 12, 12345 Musterstadt <em>(Platzhalter — bitte anpassen)</em>
+          <span class="info-label" data-ar="العنوان">Adresse</span>
+          Eisenbahnstraße 31, 04315 Leipzig-Ost
         </li>
         <li>
-          <span class="info-label">Telefon</span>
-          <a href="tel:+490000000000">+49 (0) 000 000 00 00</a> <em>(Platzhalter)</em>
-        </li>
-        <li>
-          <span class="info-label">E-Mail</span>
-          <a href="mailto:info@schami-restaurant.de">info@schami-restaurant.de</a> <em>(Platzhalter)</em>
+          <span class="info-label" data-ar="الهاتف">Telefon</span>
+          <a href="tel:+4915752370848">01575 2370848</a>
         </li>
       </ul>
 
       <div class="hours">
-        <span class="info-label">Öffnungszeiten</span>
-        <div class="hours-row"><span>Mo – Fr</span><span>12:00 – 22:30</span></div>
-        <div class="hours-row"><span>Sa – So</span><span>13:00 – 23:00</span></div>
-        <p class="hours-note">(Platzhalter — bitte an tatsächliche Zeiten anpassen)</p>
+        <span class="info-label" data-ar="ساعات العمل">Öffnungszeiten</span>
+        <div class="hours-row"><span data-ar="الإثنين – السبت">Mo – Sa</span><span>11:00 – 23:00</span></div>
+        <div class="hours-row"><span data-ar="الأحد">So</span><span>12:00 – 22:00</span></div>
       </div>
 
-      <div class="map-frame" aria-hidden="true">
-        <div class="map-frame-inner">
-          <span>Kartenausschnitt hier einbetten</span>
-        </div>
+      <a class="btn btn-outline btn-block map-link" data-ar="عرض الموقع على خرائط جوجل"
+         href="https://www.google.com/maps/place/Shami/@51.3459872,12.3969119,17z/data=!3m1!4b1!4m6!3m5!1s0x47a6f96f50a36e0d:0x5406423d2a9aa4c3!8m2!3d51.3459839!4d12.3994868!16s%2Fg%2F11hdxjpnn2"
+         target="_blank" rel="noopener">Auf Google Maps ansehen</a>
+
+      <div class="map-frame">
+        <iframe class="map-embed" src="https://www.google.com/maps?q=Shami,Eisenbahnstra%C3%9Fe+31,04315+Leipzig&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Standort Schami auf der Karte"></iframe>
       </div>
     </aside>
   </div>
@@ -290,19 +424,19 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <a href="#top" class="brand brand--footer">
-      <span class="brand-ar" aria-hidden="true">الشامي</span>
+      <img src="assets/logo-mark.jpg" alt="Schami Logo" class="brand-logo">
       <span class="brand-text">
         <span class="brand-name">Schami</span>
-        <span class="brand-sub">Orientalische Küche</span>
+        <span class="brand-sub" data-ar="مطبخ شرقي">Orientalische Küche</span>
       </span>
     </a>
 
     <nav class="footer-nav">
-      <a href="#speisekarte">Speisekarte</a>
-      <a href="#geschichte">Über uns</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#reservierung">Reservierung</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#speisekarte" data-ar="القائمة">Speisekarte</a>
+      <a href="#geschichte" data-ar="من نحن">Über uns</a>
+      <a href="#galerie" data-ar="معرض الصور">Galerie</a>
+      <a href="#bewertungen" data-ar="التقييمات">Bewertungen</a>
+      <a href="#kontakt" data-ar="تواصل معنا">Kontakt</a>
     </nav>
 
     <div class="footer-social">
@@ -315,14 +449,14 @@
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>© <span id="year"></span> Schami — Orientalische Küche. Alle Rechte vorbehalten.</p>
-    <p class="footer-fineprint">Inhalte, Adresse, Öffnungszeiten und Preise sind beispielhaft und sollten vor Veröffentlichung angepasst werden.</p>
+    <p>© <span id="year"></span> <span data-ar="الشامي — مطبخ شرقي. جميع الحقوق محفوظة.">Schami — Orientalische Küche. Alle Rechte vorbehalten.</span></p>
+    <p class="footer-fineprint" data-ar="المحتوى والعنوان وساعات العمل والأسعار توضيحية ويجب تعديلها قبل النشر.">Inhalte, Adresse, Öffnungszeiten und Preise sind beispielhaft und sollten vor Veröffentlichung angepasst werden.</p>
   </div>
 </footer>
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Schließen">&times;</button>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Schließen" data-ar-aria-label="إغلاق">&times;</button>
   <img id="lightboxImg" src="" alt="">
 </div>
 
