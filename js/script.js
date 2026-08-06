@@ -88,13 +88,8 @@ function initHeader() {
   }
 }
 
-// ---------------- Intro video (plays once per browser session) ----------------
-const INTRO_SEEN_KEY = 'schami-intro-seen';
-
-function initIntroVideo() {
-  if (sessionStorage.getItem(INTRO_SEEN_KEY)) return;
-  sessionStorage.setItem(INTRO_SEEN_KEY, '1');
-
+// ---------------- Intro video (starts only when the hero logo is clicked) ----------------
+function playIntroVideo() {
   const overlay = document.createElement('div');
   overlay.className = 'intro-video-overlay';
   overlay.innerHTML =
@@ -138,7 +133,18 @@ function initIntroVideo() {
 
 // ---------------- Bootstrap ----------------
 function init() {
-  initIntroVideo();
+  const logoTrigger = document.querySelector('.hero-brand-emblem');
+  if (logoTrigger) {
+    logoTrigger.classList.add('is-clickable');
+    logoTrigger.setAttribute('role', 'button');
+    logoTrigger.setAttribute('tabindex', '0');
+    logoTrigger.setAttribute('aria-label', 'Intro-Video abspielen');
+    logoTrigger.addEventListener('click', playIntroVideo);
+    logoTrigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playIntroVideo(); }
+    });
+  }
+
   initHeader();
 
   const tabButtons = document.querySelectorAll('.tab-btn');

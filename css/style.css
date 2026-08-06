@@ -584,6 +584,19 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
   gap: 10px;
   margin-bottom: 20px;
 }
+.hero-brand-emblem.is-clickable {
+  cursor: pointer;
+  outline: none;
+  transition: transform .3s ease;
+}
+.hero-brand-emblem.is-clickable:hover,
+.hero-brand-emblem.is-clickable:focus-visible {
+  transform: scale(1.05);
+}
+.hero-brand-emblem.is-clickable:hover .emblem-logo,
+.hero-brand-emblem.is-clickable:focus-visible .emblem-logo {
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .5), 0 0 0 6px rgba(227, 195, 117, .25);
+}
 
 .hero-title {
   font-size: clamp(2.8rem, 7vw, 5.2rem);
