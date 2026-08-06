@@ -20,7 +20,41 @@
   <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- ============ GLOBAL NAV ============ -->
-  <header class="site-header" id="siteHeader"></header>
+  <header class="site-header" id="siteHeader">
+<div class="wrap header-inner">
+  <a href="index.html" class="brand">
+    <img src="assets/logo-mark.jpg" alt="Schami Logo" class="brand-logo">
+    <span class="brand-text">
+      <span class="brand-name">Schami</span>
+      <span class="brand-sub" data-ar="مطبخ شرقي">Orientalische Küche</span>
+    </span>
+  </a>
+
+  <nav class="main-nav" id="mainNav">
+    <a href="speisekarte.html" data-ar="القائمة">Speisekarte</a>
+    <a href="galerie.html" data-ar="معرض الصور">Galerie</a>
+    <a href="kontakt.html" data-ar="تواصل معنا">Kontakt</a>
+    <button type="button" class="lang-switch lang-switch--mobile" id="langSwitchMobile"
+      aria-label="Sprache wechseln / تبديل اللغة">
+      <span class="lang-opt" data-lang="de">DE</span><span class="lang-opt" data-lang="ar">AR</span><span
+        class="lang-thumb"></span>
+    </button>
+    <a href="kontakt.html" class="btn btn-gold nav-cta-mobile" data-ar="تواصل معنا">Kontakt</a>
+  </nav>
+
+  <button type="button" class="lang-switch" id="langSwitch" aria-label="Sprache wechseln / تبديل اللغة">
+    <span class="lang-opt" data-lang="de">DE</span><span class="lang-opt" data-lang="ar">AR</span><span
+      class="lang-thumb"></span>
+  </button>
+
+  <a href="kontakt.html" class="btn btn-gold nav-cta" data-ar="تواصل معنا">Kontakt</a>
+
+  <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false"
+    data-ar-aria-label="فتح القائمة">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+</header>
 
   <!-- ============ PAGE BANNER ============ -->
   <section class="page-banner">
@@ -80,7 +114,84 @@
   <!-- ============ FOOTER ============ -->
 
   <!-- ============ FOOTER (loaded via footer.html) ============ -->
-  <div id="siteFooter"></div>
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col footer-col--brand">
+      <a href="index.html" class="brand brand--footer">
+        <img src="assets/logo-mark.jpg" alt="Schami Logo" class="brand-logo">
+        <span class="brand-text">
+          <span class="brand-name">Schami</span>
+          <span class="brand-sub" data-ar="مطبخ شرقي">Orientalische Küche</span>
+        </span>
+      </a>
+      <p class="footer-desc"
+        data-ar="نكهات شامية أصيلة، مشاوي على الفحم ومقبلات طازجة يُحضَّر كل يوم بحب وإتقان في قلب ليزبيغ.">
+        Authentische Spezialitäten, Holzkohlegrill &amp; hausgemachte Mezze — täglich frisch zubereitet mit
+        Leidenschaft im Herzen von Leipzig.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="التنقل">Navigation</h4>
+      <nav class="footer-nav-vertical">
+        <a href="speisekarte.html" data-ar="القائمة">Speisekarte</a>
+        <a href="galerie.html" data-ar="معرض الصور">Galerie</a>
+        <a href="bewertungen.html" data-ar="التقييمات">Bewertungen</a>
+        <a href="kontakt.html" data-ar="تواصل معنا">Kontakt</a>
+      </nav>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="الموقع وساعات العمل">Standort &amp; Zeiten</h4>
+      <ul class="footer-contact-list">
+        <li>
+          <span class="contact-label" data-ar="العنوان">Adresse</span>
+          <span>Eisenbahnstraße 31, 04315 Leipzig</span>
+        </li>
+        <li>
+          <span class="contact-label" data-ar="الهاتف">Telefon</span>
+          <a href="tel:+4915752370848">01575 2370848</a>
+        </li>
+        <li>
+          <span class="contact-label" data-ar="أوقات العمل">Öffnungszeiten</span>
+          <span data-ar="الإثنين – السبت: 11:00 – 23:00 | الأحد: 12:00 – 22:00">Mo – Sa: 11:00 – 23:00 | So: 12:00 – 22:00 Uhr</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="تابعنا">Folgen Sie uns</h4>
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"
+          class="social-btn social-btn--instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"
+          class="social-btn social-btn--facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+      </div>
+      <a href="kontakt.html" class="btn btn-gold footer-cta" data-ar="تواصل معنا">Kontakt aufnehmen</a>
+    </div>
+  </div>
+
+  <div class="footer-divider-rule"></div>
+
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> <span data-ar="الشامي — مطبخ شرقي. جميع الحقوق محفوظة.">Schami — Orientalische Küche. Alle Rechte vorbehalten.</span></p>
+    <p class="footer-fineprint" data-ar="المحتوى والعنوان وساعات العمل والأسعار توضيحية ويجب تعديلها قبل النشر.">
+      Inhalte, Adresse, Öffnungszeiten und Preise sind beispielhaft und sollten vor Veröffentlichung angepasst werden.
+    </p>
+  </div>
+</footer>
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox">

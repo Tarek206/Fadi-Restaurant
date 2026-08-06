@@ -5,6 +5,36 @@
    that echo the engraved trays in the food photography.
 =================================================================== */
 
+/* ---------- Intro video overlay ---------- */
+body.intro-active { overflow: hidden; }
+.intro-video-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: #000;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity .6s ease;
+}
+.intro-video-overlay.is-hiding { opacity: 0; pointer-events: none; }
+.intro-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.intro-skip {
+  position: absolute; bottom: 32px; right: 32px; z-index: 1;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.35);
+  color: #f6efe2; padding: 11px 22px; border-radius: 30px; cursor: pointer;
+  font-family: 'Jost', sans-serif; font-size: .85rem; letter-spacing: .03em;
+  backdrop-filter: blur(6px); transition: background .25s ease, border-color .25s ease;
+}
+.intro-skip:hover { background: rgba(255,255,255,.2); border-color: rgba(255,255,255,.55); }
+html[dir="rtl"] .intro-skip { right: auto; left: 32px; }
+
+@media (max-width:640px){
+  .intro-video-overlay{ height:100dvh; }
+  .intro-video{ height:100%; }
+  .intro-skip{
+    bottom:max(20px, env(safe-area-inset-bottom)); right:20px;
+    padding:13px 22px; font-size:.82rem; min-height:44px;
+  }
+  html[dir="rtl"] .intro-skip{ right:auto; left:20px; }
+}
+
 :root {
   --ink: #16110d;
   --ink-soft: #221a14;
@@ -596,12 +626,12 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
 }
 
 .emblem-logo {
-  width: 68px;
-  height: 68px;
+  width: 168px;
+  height: 168px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid var(--gold-bright);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, .5), 0 0 18px rgba(227, 195, 117, .35);
+  border: 3px solid var(--gold-bright);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .5), 0 0 24px rgba(227, 195, 117, .4);
 }
 
 .emblem-badge {
