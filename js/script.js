@@ -98,13 +98,15 @@ function initIntroVideo() {
   const overlay = document.createElement('div');
   overlay.className = 'intro-video-overlay';
   overlay.innerHTML =
-    '<video class="intro-video" src="assets/intro.mp4" autoplay muted playsinline></video>' +
+    '<video class="intro-video" src="assets/intro.mp4" autoplay playsinline></video>' +
+    '<button type="button" class="intro-unmute" data-ar="تشغيل الصوت" hidden>🔇 Ton aktivieren</button>' +
     '<button type="button" class="intro-skip" data-ar="تخطي">Überspringen</button>';
   document.body.prepend(overlay);
   document.body.classList.add('intro-active');
 
   const video = overlay.querySelector('.intro-video');
   const skipBtn = overlay.querySelector('.intro-skip');
+  const unmuteBtn = overlay.querySelector('.intro-unmute');
   let dismissed = false;
 
   const dismiss = () => {
@@ -114,6 +116,20 @@ function initIntroVideo() {
     document.body.classList.remove('intro-active');
     setTimeout(() => overlay.remove(), 650);
   };
+
+  // Try to play with sound. Browsers block unmuted autoplay unless the user
+  // has already interacted with the page, so fall back to a muted autoplay
+  // with a one-tap "enable sound" button if that happens.
+  video.play().catch(() => {
+    video.muted = true;
+    unmuteBtn.hidden = false;
+    video.play().catch(dismiss);
+  });
+
+  unmuteBtn.addEventListener('click', () => {
+    video.muted = false;
+    unmuteBtn.hidden = true;
+  });
 
   video.addEventListener('ended', dismiss);
   video.addEventListener('error', dismiss);
