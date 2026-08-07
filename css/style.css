@@ -1010,7 +1010,7 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
 ========================================================= */
 .menu {
   padding: 120px 0 130px;
-  background: var(--ink);
+  background: linear-gradient(160deg, var(--ink-soft), var(--ink));
   position: relative;
   overflow: hidden;
 }
