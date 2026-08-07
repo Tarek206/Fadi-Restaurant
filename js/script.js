@@ -131,6 +131,63 @@ function playIntroVideo() {
   skipBtn.addEventListener('click', dismiss);
 }
 
+// ---------------- Damascus culture image swiper ----------------
+function initCultureSwiper() {
+  const swiper = document.getElementById('cultureSwiper');
+  if (!swiper) return;
+
+  const track = swiper.querySelector('.culture-swiper-track');
+  const slides = Array.from(swiper.querySelectorAll('.culture-swiper-slide'));
+  const dots = Array.from(swiper.querySelectorAll('.culture-swiper-dot'));
+  const prevBtn = swiper.querySelector('.culture-swiper-prev');
+  const nextBtn = swiper.querySelector('.culture-swiper-next');
+  let index = 0;
+
+  function goTo(i) {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(${-index * 100}%)`;
+    slides.forEach((s, si) => s.classList.toggle('is-active', si === index));
+    dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
+  }
+
+  prevBtn.addEventListener('click', () => goTo(index - 1));
+  nextBtn.addEventListener('click', () => goTo(index + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  let startX = 0;
+  let deltaX = 0;
+  let dragging = false;
+
+  swiper.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    dragging = true;
+    track.style.transition = 'none';
+  }, { passive: true });
+
+  swiper.addEventListener('touchmove', (e) => {
+    if (!dragging) return;
+    deltaX = e.touches[0].clientX - startX;
+    track.style.transform = `translateX(calc(${-index * 100}% + ${deltaX}px))`;
+  }, { passive: true });
+
+  swiper.addEventListener('touchend', () => {
+    dragging = false;
+    track.style.transition = '';
+    if (Math.abs(deltaX) > 50) {
+      goTo(index + (deltaX < 0 ? 1 : -1));
+    } else {
+      goTo(index);
+    }
+    deltaX = 0;
+  });
+
+  let autoplayTimer = setInterval(() => goTo(index + 1), 5000);
+  swiper.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+  swiper.addEventListener('mouseleave', () => {
+    autoplayTimer = setInterval(() => goTo(index + 1), 5000);
+  });
+}
+
 // ---------------- Bootstrap ----------------
 function init() {
   const logoTrigger = document.querySelector('.hero-brand-emblem');
@@ -146,6 +203,7 @@ function init() {
   }
 
   initHeader();
+  initCultureSwiper();
 
   const tabButtons = document.querySelectorAll('.tab-btn');
   const panels = document.querySelectorAll('.menu-panel');

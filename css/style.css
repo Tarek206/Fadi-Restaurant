@@ -521,11 +521,11 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
   inset: 0;
   z-index: -3;
   pointer-events: none;
-  opacity: .35;
+  opacity: .78;
   background-image: url('../assets/umayyad-mosque-hero.jpg');
   background-size: cover;
   background-position: center 40%;
-  filter: brightness(.85) contrast(1.12);
+  filter: brightness(1.35) contrast(1.05);
   transition: transform 8s ease-out;
 }
 
@@ -684,83 +684,70 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
 /* =========================================================
    COMBINED UMAYYAD MOSQUE ARCHITECTURE & SCROLL PORTAL
 ========================================================= */
-.hero-umayyad-architectural-portal {
+.hero-scroll-indicator {
   position: absolute;
-  bottom: 0;
+  bottom: 36px;
   left: 0;
   right: 0;
-  height: 150px;
   z-index: 10;
-  pointer-events: none;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
-}
-
-.hero-architectural-skyline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   pointer-events: none;
-  z-index: 1;
-  overflow: visible;
 }
 
-.hero-architectural-skyline .skyline-architecture {
-  transition: stroke .4s ease, opacity .4s ease, filter .4s ease;
-}
-
-/* Mosque Arch Door Scroll Cue Button (Bab al-Amoui Arch Portal) */
+/* Minimal falling-dot scroll cue */
 .scroll-cue {
   position: relative;
-  bottom: 14px;
-  transform: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 12px;
   z-index: 5;
   pointer-events: auto;
   text-decoration: none;
   color: var(--gold-bright);
-  transition: transform .35s cubic-bezier(.16, 1, .3, 1), filter .35s ease;
+  transition: transform .35s cubic-bezier(.16, 1, .3, 1);
   -webkit-tap-highlight-color: transparent;
 }
 
 .scroll-cue-door {
-  width: 44px;
-  height: 68px;
+  width: 24px;
+  height: 34px;
   display: block;
-  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .75));
-  transition: transform .35s ease, filter .35s ease;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .5));
+}
+
+.scroll-door-leaf {
+  transform-box: fill-box;
+  animation: doorSwing 2.6s ease-in-out infinite;
+}
+
+.scroll-door-leaf-left {
+  transform-origin: left center;
+}
+
+.scroll-door-leaf-right {
+  transform-origin: right center;
+}
+
+.scroll-door-light {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: doorLightGlow 2.6s ease-in-out infinite;
 }
 
 .scroll-cue-text {
   font-family: var(--font-body);
   font-size: .65rem;
-  letter-spacing: .18em;
+  letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--cream-dim);
   opacity: .85;
   transition: color .3s, opacity .3s;
 }
 
-/* Hovering over the Portal illuminates the entire Umayyad Mosque Skyline */
-.hero-umayyad-architectural-portal:hover .hero-architectural-skyline .skyline-architecture {
-  opacity: .85;
-  stroke: #e3c375;
-  filter: drop-shadow(0 0 12px rgba(227, 195, 117, .4));
-}
-
 .scroll-cue:hover {
-  transform: translateY(-6px);
-}
-
-.scroll-cue:hover .scroll-cue-door {
-  filter: drop-shadow(0 12px 28px rgba(227, 195, 117, .6));
-  transform: scale(1.06);
+  transform: translateY(4px);
 }
 
 .scroll-cue:hover .scroll-cue-text {
@@ -768,47 +755,29 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
   opacity: 1;
 }
 
-.scroll-cue-pulse {
-  animation: mosqueDoorScroll 2.2s cubic-bezier(.4, 0, .2, 1) infinite;
+@keyframes doorSwing {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(.4);
+  }
 }
 
-@keyframes mosqueDoorScroll {
-  0% {
+@keyframes doorLightGlow {
+  0%, 100% {
     opacity: 0;
-    transform: translateY(0);
+    transform: scale(.6);
   }
 
-  25% {
+  50% {
     opacity: 1;
-  }
-
-  75% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: scale(1);
   }
 }
 
-/* ---------- Responsive Scaling for Combined Mosque Portal ---------- */
-/* Desktop PC (> 1024px) */
-@media (min-width:1025px) {
-  .hero-umayyad-architectural-portal {
-    height: 160px;
-  }
-
-  .scroll-cue {
-    bottom: 16px;
-  }
-
-  .scroll-cue-door {
-    width: 46px;
-    height: 70px;
-  }
-}
-
+/* ---------- Responsive Scaling for Scroll Indicator ---------- */
 /* Tablet (768px - 1024px) */
 @media (max-width:1024px) and (min-width:768px) {
   .hero-grid {
@@ -816,17 +785,13 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
     padding-bottom: 125px;
   }
 
-  .hero-umayyad-architectural-portal {
-    height: 125px;
-  }
-
-  .scroll-cue {
-    bottom: 10px;
+  .hero-scroll-indicator {
+    bottom: 26px;
   }
 
   .scroll-cue-door {
-    width: 36px;
-    height: 56px;
+    width: 20px;
+    height: 28px;
   }
 
   .scroll-cue-text {
@@ -892,17 +857,12 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
     font-size: .92rem;
   }
 
-  .hero-umayyad-architectural-portal {
-    height: 85px;
+  .hero-scroll-indicator {
+    bottom: 16px;
   }
 
-  .scroll-cue {
-    bottom: 4px;
-  }
-
-  .scroll-cue-door {
-    width: 28px;
-    height: 42px;
+  .scroll-cue-line {
+    height: 28px;
   }
 
   .scroll-cue-text {
@@ -993,21 +953,16 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
 }
 
 .story-media img {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
+  border-radius: calc(var(--radius) + 6px);
+  box-shadow: 0 40px 70px -30px rgba(22, 17, 13, .45);
   position: relative;
   z-index: 1;
+  display: block;
+  width: 100%;
 }
 
 .story-media-frame {
-  position: absolute;
-  top: 24px;
-  inset-inline-start: -24px;
-  inset-inline-end: 24px;
-  bottom: -24px;
-  z-index: 0;
-  border: 2px solid var(--gold);
-  border-radius: var(--radius);
+  display: none;
 }
 
 .story-copy h2 {
@@ -1021,25 +976,33 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
 }
 
 .story-stats {
-  display: flex;
-  gap: 36px;
-  margin-top: 2em;
-  flex-wrap: wrap;
+  margin-top: 2.4em;
+  border-top: 1px solid rgba(201, 162, 74, .35);
 }
 
 .story-stats div {
-  font-size: .85rem;
-  color: #5c5145;
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(201, 162, 74, .35);
 }
 
-.story-stats span {
-  display: block;
+.story-stats span:first-child {
   font-family: var(--font-display);
   font-size: 2.1rem;
   color: var(--crimson);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
-  margin-bottom: .15em;
+  flex: 0 0 auto;
+  min-width: 3.2ch;
+}
+
+.story-stats span:last-child {
+  font-size: .78rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #6b5f4f;
 }
 
 /* =========================================================
@@ -1047,7 +1010,7 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
 ========================================================= */
 .menu {
   padding: 120px 0 130px;
-  background: var(--ink);
+  background: linear-gradient(160deg, var(--ink-soft), var(--ink));
   position: relative;
   overflow: hidden;
 }
@@ -2171,24 +2134,140 @@ html[dir="rtl"] .review-quote {
 
 .culture-media {
   position: relative;
+  padding: 18px 18px 18px 0;
+}
+
+.culture-media:has(.culture-swiper) {
+  padding: 0;
+}
+
+.culture-media::before {
+  content: "";
+  position: absolute;
+  inset: 0 18px 0 0;
+  border: 1.5px solid rgba(227, 195, 117, .5);
+  border-radius: calc(var(--radius) + 6px);
+  z-index: 0;
+}
+
+.culture-media:has(.culture-swiper)::before {
+  display: none;
 }
 
 .culture-media img {
   width: 100%;
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius) + 2px);
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(227, 195, 117, .25);
   display: block;
+  position: relative;
+  z-index: 1;
+  transform: translate(18px, -18px);
+}
+
+.culture-swiper {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  border-radius: calc(var(--radius) + 2px);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(227, 195, 117, .25);
+  aspect-ratio: 4 / 5;
+  touch-action: pan-y;
+}
+
+.culture-swiper-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.culture-swiper-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.culture-swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.culture-swiper-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(227, 195, 117, .5);
+  background: rgba(22, 17, 13, .55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--gold-bright);
+  font-size: 1.4rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.culture-swiper-arrow:hover {
+  background: rgba(22, 17, 13, .8);
+}
+
+.culture-swiper-prev { inset-inline-start: 10px; }
+.culture-swiper-next { inset-inline-end: 10px; }
+
+.culture-swiper-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.culture-swiper-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(246, 239, 226, .7);
+  background: rgba(246, 239, 226, .25);
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.culture-swiper-dot.is-active {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+  transform: scale(1.2);
 }
 
 .culture-badge-overlay {
   position: absolute;
-  bottom: -20px;
-  inset-inline-end: -20px;
-  background: var(--ink);
-  border: 1px solid var(--gold-bright);
+  bottom: 2px;
+  inset-inline-end: -14px;
+  background: rgba(22, 17, 13, .68);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(227, 195, 117, .45);
   padding: 16px 22px;
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius) + 2px);
   box-shadow: var(--shadow-lg);
   max-width: 240px;
   z-index: 2;
@@ -2233,19 +2312,21 @@ html[dir="rtl"] .review-quote {
 }
 
 .culture-card {
-  background: rgba(22, 17, 13, .75);
-  border: 1px solid rgba(227, 195, 117, .18);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  background: linear-gradient(165deg, rgba(227, 195, 117, .06), rgba(22, 17, 13, .8) 40%);
+  border: 1px solid rgba(227, 195, 117, .16);
+  border-top: 2px solid rgba(227, 195, 117, .4);
+  border-radius: 14px;
+  padding: 32px 26px;
+  transition: transform .35s cubic-bezier(.16, 1, .3, 1), border-color .3s ease, box-shadow .35s ease, background .3s ease;
   position: relative;
   overflow: hidden;
 }
 
 .culture-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   border-color: var(--gold-bright);
-  box-shadow: 0 18px 40px -15px rgba(201, 162, 74, .35);
+  box-shadow: 0 20px 44px -18px rgba(201, 162, 74, .4);
+  background: linear-gradient(165deg, rgba(227, 195, 117, .1), rgba(22, 17, 13, .85) 40%);
 }
 
 .culture-card::after {
@@ -2253,33 +2334,47 @@ html[dir="rtl"] .review-quote {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   pointer-events: none;
-  opacity: .06;
+  opacity: .07;
   background-image: var(--pattern-damascus-gold);
-  background-size: 60px 60px;
+  background-size: 70px 70px;
 }
 
 .culture-card-icon {
-  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(227, 195, 117, .18), rgba(179, 43, 76, .14));
+  border: 1px solid rgba(227, 195, 117, .3);
   color: var(--gold-bright);
-  margin-bottom: 12px;
-  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.culture-card-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .culture-card h3 {
   color: var(--cream);
-  font-size: 1.3rem;
-  margin: 0 0 .4em;
+  font-size: 1.28rem;
+  margin: 0 0 .5em;
   font-family: var(--font-display);
+  letter-spacing: .01em;
 }
 
 .culture-card p {
   color: #b9ac9a;
-  font-size: .9rem;
+  font-size: .92rem;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 @media (max-width:980px) {
