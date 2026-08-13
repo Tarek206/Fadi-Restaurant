@@ -1220,6 +1220,54 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
   font-size: 1.4rem;
 }
 
+/* ---- Sandwiches & Wraps: dedicated no-photo card design ---- */
+.dish-card--sandwich {
+  background: linear-gradient(160deg, var(--ink-soft), var(--ink));
+  border: 1px solid rgba(201, 162, 74, .22);
+  border-top: 3px solid var(--gold);
+}
+
+.dish-card--sandwich:hover {
+  border-color: rgba(227, 195, 117, .45);
+}
+
+.dish-card--sandwich .dish-body {
+  padding: 26px 24px 24px;
+}
+
+.dish-card--sandwich .dish-head {
+  position: relative;
+  min-height: 36px;
+  padding-inline-start: 48px;
+  align-items: center;
+}
+
+.dish-card--sandwich .dish-head::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(227, 195, 117, .1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e3c375' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12c0-4 3-7 8-7s8 3 8 7-3 7-8 7-8-3-8-7Z'/%3E%3Cpath d='M4 12h16M8 8l1 8M16 8l-1 8'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+  border: 1px solid rgba(227, 195, 117, .35);
+}
+
+.dish-card--sandwich .dish-head h3 {
+  font-size: 1.2rem;
+}
+
+.dish-card--sandwich .dish-ingredients {
+  border-top-style: solid;
+  border-top-color: rgba(201, 162, 74, .18);
+}
+
 /* =========================================================
    GALLERY
 ========================================================= */
