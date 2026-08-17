@@ -1157,6 +1157,100 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
   transform: scale(1.06);
 }
 
+/* ---- Swipeable dish-image gallery (e.g. Mansaf) ---- */
+.dish-swiper {
+  position: relative;
+  touch-action: pan-y;
+}
+
+.dish-swiper-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dish-swiper-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.dish-swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: none;
+  cursor: default;
+}
+
+.dish-card:hover .dish-swiper-slide img {
+  transform: none;
+}
+
+.dish-swiper-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(227, 195, 117, .5);
+  background: rgba(22, 17, 13, .55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--gold-bright);
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background .2s ease;
+}
+
+.dish-swiper-arrow:hover {
+  background: rgba(22, 17, 13, .8);
+}
+
+.dish-swiper-prev {
+  inset-inline-start: 8px;
+}
+
+.dish-swiper-next {
+  inset-inline-end: 8px;
+}
+
+.dish-swiper-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 2;
+}
+
+.dish-swiper-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(246, 239, 226, .7);
+  background: rgba(246, 239, 226, .25);
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.dish-swiper-dot.is-active {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+  transform: scale(1.2);
+}
+
 .dish-body {
   padding: 22px 24px 26px;
 }
@@ -1266,6 +1360,114 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
 .dish-card--sandwich .dish-ingredients {
   border-top-style: solid;
   border-top-color: rgba(201, 162, 74, .18);
+}
+
+/* ---- Auf Bestellung / Catering ---- */
+.catering-intro {
+  position: relative;
+  background: linear-gradient(160deg, var(--ink-soft), var(--ink));
+  border: 1px solid rgba(201, 162, 74, .3);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.catering-intro-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: rgba(227, 195, 117, .1);
+  border: 1px solid rgba(227, 195, 117, .35);
+  color: var(--gold-bright);
+}
+
+.catering-intro-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.catering-intro h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--gold-bright);
+  margin: 0 0 10px;
+}
+
+.catering-intro p {
+  color: #cabfae;
+  font-size: .96rem;
+  line-height: 1.6;
+  max-width: 56ch;
+  margin: 0 auto;
+}
+
+.catering-intro a {
+  color: var(--gold-bright);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.dish-card--catering {
+  background: linear-gradient(160deg, var(--ink-soft), var(--ink));
+  border: 1px solid rgba(201, 162, 74, .22);
+  border-top: 3px solid var(--gold);
+}
+
+.dish-card--catering:hover {
+  border-color: rgba(227, 195, 117, .45);
+}
+
+.dish-card--catering .dish-body {
+  padding: 26px 24px 24px;
+}
+
+.dish-card--catering .dish-head {
+  position: relative;
+  min-height: 36px;
+  padding-inline-start: 48px;
+  align-items: center;
+}
+
+.dish-card--catering .dish-head h3 {
+  font-size: 1.2rem;
+}
+
+.dish-card--catering .dish-head::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(227, 195, 117, .1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+  border: 1px solid rgba(227, 195, 117, .35);
+}
+
+/* Kibbeh Nayyeh — kibbeh quenelle icon */
+.dish-card--icon-kibbeh .dish-head::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e3c375' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='12' cy='12' rx='7' ry='4.5'/%3E%3Cpath d='M6.5 9.5c2-1.5 9-1.5 11 0M6.5 14.5c2 1.5 9 1.5 11 0'/%3E%3C/svg%3E");
+}
+
+/* Yalanji — grape/vine leaf icon */
+.dish-card--icon-yalanji .dish-head::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e3c375' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21V9M12 9c0-4-3-6-7-6 0 4 2 7 7 7ZM12 9c0-4 3-6 7-6 0 4-2 7-7 7Z'/%3E%3C/svg%3E");
+}
+
+/* Manaqish — flatbread icon */
+.dish-card--icon-manaqish .dish-head::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e3c375' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8.5'/%3E%3Ccircle cx='9' cy='10' r='.8' fill='%23e3c375' stroke='none'/%3E%3Ccircle cx='14' cy='9' r='.8' fill='%23e3c375' stroke='none'/%3E%3Ccircle cx='12' cy='14' r='.8' fill='%23e3c375' stroke='none'/%3E%3Ccircle cx='16' cy='13' r='.8' fill='%23e3c375' stroke='none'/%3E%3C/svg%3E");
 }
 
 /* =========================================================

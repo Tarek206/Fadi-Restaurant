@@ -188,6 +188,62 @@ function initCultureSwiper() {
   });
 }
 
+// ---------------- Generic swipeable dish-photo galleries (e.g. Mansaf) ----------------
+function initDishSwipers() {
+  document.querySelectorAll('.dish-swiper').forEach((swiper) => {
+    const track = swiper.querySelector('.dish-swiper-track');
+    const slides = Array.from(swiper.querySelectorAll('.dish-swiper-slide'));
+    const dots = Array.from(swiper.querySelectorAll('.dish-swiper-dot'));
+    const prevBtn = swiper.querySelector('.dish-swiper-prev');
+    const nextBtn = swiper.querySelector('.dish-swiper-next');
+    if (slides.length < 2) return;
+    let index = 0;
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(${-index * 100}%)`;
+      dots.forEach((d, di) => d.classList.toggle('is-active', di === index));
+    }
+
+    prevBtn.addEventListener('click', (e) => { e.stopPropagation(); goTo(index - 1); });
+    nextBtn.addEventListener('click', (e) => { e.stopPropagation(); goTo(index + 1); });
+    dots.forEach((dot, i) => dot.addEventListener('click', (e) => { e.stopPropagation(); goTo(i); }));
+
+    let startX = 0;
+    let deltaX = 0;
+    let dragging = false;
+
+    swiper.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      dragging = true;
+      track.style.transition = 'none';
+    }, { passive: true });
+
+    swiper.addEventListener('touchmove', (e) => {
+      if (!dragging) return;
+      deltaX = e.touches[0].clientX - startX;
+      track.style.transform = `translateX(calc(${-index * 100}% + ${deltaX}px))`;
+    }, { passive: true });
+
+    swiper.addEventListener('touchend', () => {
+      dragging = false;
+      track.style.transition = '';
+      if (Math.abs(deltaX) > 40) {
+        goTo(index + (deltaX < 0 ? 1 : -1));
+      } else {
+        goTo(index);
+      }
+      deltaX = 0;
+    });
+
+    let autoplayTimer = setInterval(() => goTo(index + 1), 4500);
+    swiper.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+    swiper.addEventListener('mouseleave', () => {
+      autoplayTimer = setInterval(() => goTo(index + 1), 4500);
+    });
+  });
+}
+
 // ---------------- Bootstrap ----------------
 function init() {
   const logoTrigger = document.querySelector('.hero-brand-emblem');
@@ -204,6 +260,7 @@ function init() {
 
   initHeader();
   initCultureSwiper();
+  initDishSwipers();
 
   const tabButtons = document.querySelectorAll('.tab-btn');
   const panels = document.querySelectorAll('.menu-panel');
