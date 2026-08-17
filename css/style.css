@@ -1510,15 +1510,18 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
   width: 100%;
   margin-bottom: 16px;
   border-radius: var(--radius);
+  border: 1px solid rgba(22, 17, 13, .06);
+  box-shadow: 0 10px 24px -14px rgba(22, 17, 13, .35);
   break-inside: avoid;
   cursor: pointer;
-  transition: transform .4s ease, filter .4s ease;
+  transition: transform .4s ease, filter .4s ease, box-shadow .4s ease;
   filter: saturate(1);
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.015);
+  transform: translateY(-4px) scale(1.015);
   filter: saturate(1.12);
+  box-shadow: 0 20px 34px -16px rgba(22, 17, 13, .45);
 }
 
 /* =========================================================
