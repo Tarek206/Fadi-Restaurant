@@ -131,6 +131,23 @@ function playIntroVideo() {
   skipBtn.addEventListener('click', dismiss);
 }
 
+// ---------------- Preload the rest of a swiper's slides after first paint ----------------
+// The first slide loads eagerly for a fast initial render; the remaining slides use
+// loading="lazy" in the markup (native lazy-loading is unreliable for slides parked
+// off-screen inside a horizontally-translated track). Once the page has settled we warm
+// the browser cache for them in the background so swiping never has to wait on the network.
+function preloadRemainingSlides(swiper, imgSelector) {
+  const schedule = window.requestIdleCallback || ((fn) => setTimeout(fn, 1200));
+  schedule(() => {
+    swiper.querySelectorAll(imgSelector).forEach((img) => {
+      if (img.loading === 'lazy') {
+        const preload = new Image();
+        preload.src = img.currentSrc || img.src;
+      }
+    });
+  });
+}
+
 // ---------------- Damascus culture image swiper ----------------
 function initCultureSwiper() {
   const swiper = document.getElementById('cultureSwiper');
@@ -186,6 +203,8 @@ function initCultureSwiper() {
   swiper.addEventListener('mouseleave', () => {
     autoplayTimer = setInterval(() => goTo(index + 1), 5000);
   });
+
+  preloadRemainingSlides(swiper, '.culture-swiper-slide img');
 }
 
 // ---------------- Generic swipeable dish-photo galleries (e.g. Mansaf) ----------------
@@ -241,6 +260,8 @@ function initDishSwipers() {
     swiper.addEventListener('mouseleave', () => {
       autoplayTimer = setInterval(() => goTo(index + 1), 4500);
     });
+
+    preloadRemainingSlides(swiper, '.dish-swiper-slide img');
   });
 }
 
