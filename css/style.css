@@ -307,6 +307,10 @@ html[dir="rtl"] em {
   object-fit: cover;
   border-radius: 50%;
   flex-shrink: 0;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .brand-text {
@@ -590,6 +594,7 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
   cursor: pointer;
   outline: none;
   transition: transform .3s ease;
+  will-change: transform;
 }
 .hero-brand-emblem.is-clickable:hover,
 .hero-brand-emblem.is-clickable:focus-visible {
@@ -667,6 +672,10 @@ html[dir="rtl"] .lang-switch[data-active="ar"] .lang-thumb {
   border-radius: 50%;
   border: 3px solid var(--gold-bright);
   box-shadow: 0 8px 26px rgba(0, 0, 0, .5), 0 0 24px rgba(227, 195, 117, .4);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .emblem-badge {
@@ -2649,4 +2658,129 @@ html[dir="rtl"] .review-quote {
   .damascus-culture {
     padding: 72px 0;
   }
+}
+
+/* ============ DIETARY BADGES (ICON ONLY WITH CUSTOM TOOLTIP) ============ */
+.diet-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(22, 17, 13, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  cursor: pointer;
+}
+
+.diet-badge:hover {
+  transform: scale(1.12);
+}
+
+.diet-badge::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 8px);
+  transform: translateY(-50%) translateX(-4px);
+  background: rgba(18, 14, 11, 0.96);
+  color: #e3c375;
+  border: 1px solid rgba(227, 195, 117, 0.45);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  font-family: var(--font-body);
+}
+
+.diet-badge:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+.diet-badge--vegan {
+  color: #81c784;
+  border: 1.5px solid rgba(129, 199, 132, 0.6);
+}
+
+.diet-badge--veg {
+  color: #ffb74d;
+  border: 1.5px solid rgba(255, 183, 77, 0.6);
+}
+
+.diet-badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+[dir="rtl"] .diet-badge {
+  left: auto;
+  right: 10px;
+}
+
+[dir="rtl"] .diet-badge::after {
+  left: auto;
+  right: calc(100% + 8px);
+  transform: translateY(-50%) translateX(4px);
+}
+
+[dir="rtl"] .diet-badge:hover::after {
+  transform: translateY(-50%) translateX(0);
+}
+
+/* ============ DIET LEGEND BAR (LEFT ALIGNED) ============ */
+.diet-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 0.88rem;
+  color: var(--cream);
+}
+
+.diet-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.diet-legend-divider {
+  color: rgba(227, 195, 117, 0.35);
+  font-weight: 300;
+}
+
+.diet-badge--inline {
+  position: static;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  box-shadow: none;
+  cursor: default;
+}
+
+.diet-badge--inline::after {
+  display: none !important;
+}
+
+.diet-badge--inline svg {
+  width: 12px;
+  height: 12px;
 }

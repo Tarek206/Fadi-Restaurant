@@ -23,7 +23,7 @@
   <header class="site-header" id="siteHeader">
     <div class="wrap header-inner">
       <a href="index.html" class="brand">
-        <img src="assets/logo-mark.jpg" alt="Schami Logo" class="brand-logo">
+        <img src="assets/logo-mark-header.jpg" alt="Schami Logo" class="brand-logo">
         <span class="brand-text">
           <span class="brand-name">Schami</span>
           <span class="brand-sub" data-ar="مطبخ شرقي">Orientalische Küche</span>
@@ -73,6 +73,12 @@
   <section class="menu" id="speisekarte">
     <div class="wrap">
 
+      <div class="diet-legend">
+  <span class="diet-legend-item"><span class="diet-badge diet-badge--vegan diet-badge--inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span> <span data-ar="نباتي صِرف">Vegan</span></span>
+  <span class="diet-legend-divider">|</span>
+  <span class="diet-legend-item"><span class="diet-badge diet-badge--veg diet-badge--inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16l-8-7-8 7z"/><path d="M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><circle cx="9" cy="15" r="1.2" fill="currentColor"/><circle cx="15" cy="14" r="1.5" fill="currentColor"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg></span> <span data-ar="نباتي">Vegetarisch</span></span>
+</div>
+
       <div class="menu-tabs" id="menuTabs">
         <button class="tab-btn is-active" data-tab="mezze" data-ar="مقبلات وسلطات">Mezze &amp; Vorspeisen</button>
         <button class="tab-btn" data-tab="grill" data-ar="الأطباق الرئيسية والمشويات">Hauptspeisen &amp; Grill</button>
@@ -88,11 +94,12 @@
           <div class="dish-grid">
 
             <article class="dish-card" data-bestseller="true">
+              <span class="diet-badge diet-badge--veg" data-tooltip="Vegetarisch" data-ar-tooltip="نباتي" aria-label="Vegetarisch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18l-9-9z" fill="rgba(255, 183, 77, 0.35)"/><path d="M3 13v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><circle cx="7.5" cy="17" r="1.2" fill="currentColor"/><circle cx="16.5" cy="16.5" r="1.5" fill="currentColor"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/><circle cx="12" cy="8.8" r="0.9" fill="currentColor"/></svg></span>
               <span class="bestseller-badge" data-ar="★ الأكثر مبيعاً">★ Bestseller</span>
               <div class="dish-img"><img src="assets/mezze-plate-full.jpg" alt="Mezze Teller" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="مقبلات مشكلة">Mezze-Teller</h3><span class="price">14,50 €</span>
+                  <h3 data-ar="مقبلات مشكلة">Mezze-Teller </h3><span class="price">14,50 €</span>
                 </div>
                 <p data-ar="حمص، محمرة، متبل وسلطة طازجة، تُقدَّم مع خبز دافئ.">Hummus, Muhammara, Mutabal und frischer
                   Salat, serviert mit warmem Fladenbrot.</p>
@@ -103,10 +110,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/mezze/muhammara.jpg" alt="Muhammara" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="محمرة">Muhammara</h3><span class="price">6,50 €</span>
+                  <h3 data-ar="محمرة">Muhammara </h3><span class="price">6,50 €</span>
                 </div>
                 <p data-ar="مقبلات الفلفل الأحمر الجوزية المتبلة بزيت الزيتون ودبس الرمان.">Gewürzte
                   Paprika-Walnuss-Paste mit Olivenöl und Granatapfelsirup.</p>
@@ -117,10 +125,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/mezze/hummus.jpg" alt="Hummus" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="حمص">Hummus</h3><span class="price">7,00 €</span>
+                  <h3 data-ar="حمص">Hummus </h3><span class="price">7,00 €</span>
                 </div>
                 <p data-ar="حمص كريمي بالطحينة وزيت الزيتون والليمون.">Cremiges Kichererbsenpüree mit Tahini, Olivenöl
                   und Zitrone.</p>
@@ -131,10 +140,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/mezze/mutabal.jpg" alt="Mutabal" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="متبل باذنجان">Mutabal</h3><span class="price">7,00 €</span>
+                  <h3 data-ar="متبل باذنجان">Mutabal </h3><span class="price">7,00 €</span>
                 </div>
                 <p data-ar="متبل باذنجان مدخن بالطحينة وحب الرمان وزيت الزيتون.">Rauchige Auberginencreme mit Tahini,
                   Granatapfelkernen und Olivenöl.</p>
@@ -145,10 +155,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/mezze/baba-ghanoush.jpg" alt="Baba Ghanoush" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="بابا غنوج">Baba Ghanoush</h3><span class="price">7,00 €</span>
+                  <h3 data-ar="بابا غنوج">Baba Ghanoush </h3><span class="price">7,00 €</span>
                 </div>
                 <p data-ar="باذنجان مشوي مع الفلفل الألوان والبصل والجوز وزيت الزيتون.">Gegrillte Auberginen mit bunten
                   Paprika, Zwiebeln, Walnüssen und Olivenöl.</p>
@@ -159,10 +170,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--veg" data-tooltip="Vegetarisch" data-ar-tooltip="نباتي" aria-label="Vegetarisch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18l-9-9z" fill="rgba(255, 183, 77, 0.35)"/><path d="M3 13v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><circle cx="7.5" cy="17" r="1.2" fill="currentColor"/><circle cx="16.5" cy="16.5" r="1.5" fill="currentColor"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/><circle cx="12" cy="8.8" r="0.9" fill="currentColor"/></svg></span>
               <div class="dish-img"><img src="assets/mezze/kashke-khadra.jpg" alt="Kashke Khadra" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="كشكة خضرا">Kashke Khadra</h3><span class="price">7,00 €</span>
+                  <h3 data-ar="كشكة خضرا">Kashke Khadra </h3><span class="price">7,00 €</span>
                 </div>
                 <p data-ar="كشكة شامية تقليدية مع البرغل والأعشاب الخضراء وزيت الزيتون.">Traditionelle fermentierte
                   Yogurt-Bulgur-Creme mit frischen Kräutern und Olivenöl.</p>
@@ -173,10 +185,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--veg" data-tooltip="Vegetarisch" data-ar-tooltip="نباتي" aria-label="Vegetarisch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18l-9-9z" fill="rgba(255, 183, 77, 0.35)"/><path d="M3 13v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><circle cx="7.5" cy="17" r="1.2" fill="currentColor"/><circle cx="16.5" cy="16.5" r="1.5" fill="currentColor"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/><circle cx="12" cy="8.8" r="0.9" fill="currentColor"/></svg></span>
               <div class="dish-img"><img src="assets/mezze/labneh.jpg" alt="Labneh" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="لبنة">Labneh</h3><span class="price">5,00 €</span>
+                  <h3 data-ar="لبنة">Labneh </h3><span class="price">5,00 €</span>
                 </div>
                 <p data-ar="لبنة شامية طازجة متبلة بالنعناع المجفف وزيت الزيتون الأصلي.">Frischer orientalischer
                   Frischkäse-Joghurt mit getrockneter Minze und Olivenöl.</p>
@@ -187,10 +200,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/mezze/makdous.jpg" alt="Makdous" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="مكدوس (3 قطع)">Makdous (3 Stk.)</h3><span class="price">6,00 €</span>
+                  <h3 data-ar="مكدوس (3 قطع)">Makdous (3 Stk.) </h3><span class="price">6,00 €</span>
                 </div>
                 <p data-ar="باذنجان صغير محشو بالجوز والفلفل الأحمر ومحفوظ بزيت الزيتون.">Mini-Auberginen gefüllt mit
                   Walnüssen, Knoblauch und Paprika in Olivenöl.</p>
@@ -201,10 +215,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/fattoush.jpg" alt="Fattoush Salat" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="فتوش">Fattoush</h3><span class="price">6,50 €</span>
+                  <h3 data-ar="فتوش">Fattoush </h3><span class="price">6,50 €</span>
                 </div>
                 <p data-ar="سلطة خبز شامية بالسماق ودبس الرمان وخبز مقرمش.">Authentischer Brotsalat mit Sumach,
                   Granatapfelsirup und knusprigem Fladenbrot.</p>
@@ -215,11 +230,12 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/gallery/tabouleh-bowl.jpg" alt="Tabouleh Salat" loading="lazy">
               </div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="تبولة">Tabouleh</h3><span class="price">7,00 €</span>
+                  <h3 data-ar="تبولة">Tabouleh </h3><span class="price">7,00 €</span>
                 </div>
                 <p data-ar="بقدونس مفروم ناعمًا مع برغل وطماطم ونعناع وليمون.">Fein gehackte Petersilie mit Bulgur,
                   Tomaten, Minze und Zitronensaft.</p>
@@ -230,10 +246,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/ful-1.jpg" alt="Ful Medames mit Öl" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="فول بالزيت">Ful Medames (mit Öl)</h3><span class="price">7,00 €</span>
+                  <h3 data-ar="فول بالزيت">Ful Medames (mit Öl) </h3><span class="price">7,00 €</span>
                 </div>
                 <p data-ar="فول مطهو ببطء مع زيت الزيتون والليمون والطماطم والبقدونس.">Geschmorte Saubohnen mit
                   Olivenöl, Zitrone, Tomaten und Petersilie.</p>
@@ -244,11 +261,13 @@
             </article>
 
             <article class="dish-card">
-              <div class="dish-img"><img src="assets/gallery/salat-bowl-b.jpg" alt="Ful Medames mit Joghurt" loading="lazy">
+              <span class="diet-badge diet-badge--veg" data-tooltip="Vegetarisch" data-ar-tooltip="نباتي" aria-label="Vegetarisch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18l-9-9z" fill="rgba(255, 183, 77, 0.35)"/><path d="M3 13v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><circle cx="7.5" cy="17" r="1.2" fill="currentColor"/><circle cx="16.5" cy="16.5" r="1.5" fill="currentColor"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/><circle cx="12" cy="8.8" r="0.9" fill="currentColor"/></svg></span>
+              <div class="dish-img"><img src="assets/gallery/salat-bowl-b.jpg" alt="Ful Medames mit Joghurt"
+                  loading="lazy">
               </div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="فول باللبن">Ful Medames (mit Joghurt)</h3><span class="price">7,50 €</span>
+                  <h3 data-ar="فول باللبن">Ful Medames (mit Joghurt) </h3><span class="price">7,50 €</span>
                 </div>
                 <p data-ar="فول مطهو ببطء مع صلصة اللبن والطحينة والثوم وزيت الزيتون.">Geschmorte Saubohnen in cremiger
                   Joghurt-Tahini-Soße und Knoblauch.</p>
@@ -259,10 +278,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--veg" data-tooltip="Vegetarisch" data-ar-tooltip="نباتي" aria-label="Vegetarisch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18l-9-9z" fill="rgba(255, 183, 77, 0.35)"/><path d="M3 13v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><circle cx="7.5" cy="17" r="1.2" fill="currentColor"/><circle cx="16.5" cy="16.5" r="1.5" fill="currentColor"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/><circle cx="12" cy="8.8" r="0.9" fill="currentColor"/></svg></span>
               <div class="dish-img"><img src="assets/gallery/mezze-4bowls-suppe.jpg" alt="Fatteh" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="فتة حمص">Fatteh</h3><span class="price">8,00 €</span>
+                  <h3 data-ar="فتة حمص">Fatteh </h3><span class="price">8,00 €</span>
                 </div>
                 <p data-ar="حمص دافئ مع الخبز المقرمش وصلصة اللبن والطحينة والصنوبر.">Warme Kichererbsen auf knusprigem
                   Fladenbrot mit Joghurt-Tahini-Soße und Nüssen.</p>
@@ -273,10 +293,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/mezze/hummus-oel.jpg" alt="Hummus mit Öl" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="حمص بالزيت">Hummus (mit Öl)</h3><span class="price">6,50 €</span>
+                  <h3 data-ar="حمص بالزيت">Hummus (mit Öl) </h3><span class="price">6,50 €</span>
                 </div>
                 <p data-ar="حمص حب دافئ متبل بالكمون والليمون وزيت الزيتون البكر.">Ganze warme Kichererbsen milde
                   gewürzt mit Kreuzkümmel, Zitrone und Olivenöl.</p>
@@ -287,10 +308,12 @@
             </article>
 
             <article class="dish-card">
-              <div class="dish-img"><img src="assets/mezze/hummus-joghurt.jpg" alt="Hummus Fettah mit Joghurt" loading="lazy"></div>
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+              <div class="dish-img"><img src="assets/mezze/hummus-joghurt.jpg" alt="Hummus Fettah mit Joghurt"
+                  loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="حمص باللبن">Hummus Fettah (mit Joghurt)</h3><span class="price">7,00 €</span>
+                  <h3 data-ar="حمص باللبن">Hummus Fettah (mit Joghurt) </h3><span class="price">7,00 €</span>
                 </div>
                 <p data-ar="حمص حب دافئ بصلصة اللبن والطحينة والثوم.">Ganze Kichererbsen in milder Joghurt-Tahini-Soße.
                 </p>
@@ -301,10 +324,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/gallery/salat-bowl.jpg" alt="Orient-Salat" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="سلطة شرقية">Orient-Salat</h3><span class="price">7,00 €</span>
+                  <h3 data-ar="سلطة شرقية">Orient-Salat </h3><span class="price">7,00 €</span>
                 </div>
                 <p data-ar="سلطة خضراء طازجة بالخيار والطماطم والنعناع وزيت الزيتون والليمون.">Frischer orientalischer
                   Salat mit Gurken, Tomaten, Minze und Zitronen-Dressing.</p>
@@ -509,11 +533,12 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/menu-extra/falafel-teller.jpg" alt="Falafel Teller" loading="lazy">
               </div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="وجبة فلافل">Falafel Teller</h3><span class="price">9,00 €</span>
+                  <h3 data-ar="وجبة فلافل">Falafel Teller </h3><span class="price">9,00 €</span>
                 </div>
                 <p data-ar="كرات الفلافل المقرمشة تُقدَّم مع الحمص والسلطة والصلصة والخبز.">Knusprige Falafelbällchen
                   serviert mit Hummus, Salat, Tahini-Dip und Fladenbrot.</p>
@@ -524,11 +549,12 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/menu-extra/falafel-kairo.jpg" alt="Falafel Teller Kairo"
                   loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="وجبة فلافل مصري">Falafel Teller "Kairo"</h3><span class="price">10,00 €</span>
+                  <h3 data-ar="وجبة فلافل مصري">Falafel Teller "Kairo" </h3><span class="price">10,00 €</span>
                 </div>
                 <p data-ar="فلافل على الطريقة المصرية مع سلطة الباذنجان المتبلة والخبز.">Ägyptische Ta'ameya-Falafel
                   serviert mit gegrillter Aubergine, Dips und Salat.</p>
@@ -539,10 +565,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--veg" data-tooltip="Vegetarisch" data-ar-tooltip="نباتي" aria-label="Vegetarisch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18l-9-9z" fill="rgba(255, 183, 77, 0.35)"/><path d="M3 13v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><circle cx="7.5" cy="17" r="1.2" fill="currentColor"/><circle cx="16.5" cy="16.5" r="1.5" fill="currentColor"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/><circle cx="12" cy="8.8" r="0.9" fill="currentColor"/></svg></span>
               <div class="dish-img"><img src="assets/halloumi-teller.jpg" alt="Halloumi Teller" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="وجبة حلومي">Halloumi Teller</h3><span class="price">12,00 €</span>
+                  <h3 data-ar="وجبة حلومي">Halloumi Teller </h3><span class="price">12,00 €</span>
                 </div>
                 <p data-ar="شرائح جبن الحلومي المشوية على الفحم مع السلطة والبطاطا.">Gegrillte Halloumi-Käsescheiben vom
                   Holzkohlegrill mit Pommes und frischem Salat.</p>
@@ -581,14 +608,18 @@
             </article>
 
             <article class="dish-card">
-              <div class="dish-img"><img src="assets/menu-extra/kibbeh-meshwiyeh.jpg" alt="Gegrillte Kibbeh" loading="lazy"></div>
+              <div class="dish-img"><img src="assets/menu-extra/kibbeh-meshwiyeh.jpg" alt="Gegrillte Kibbeh"
+                  loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
                   <h3 data-ar="كبة مشوية (قطعة)">Gegrillte Kibbeh (1 Stück)</h3><span class="price">3,50 €</span>
                 </div>
-                <p data-ar="كبة مشوية دمشقية على الفحم محشوة باللحم المفروم والمكسرات، تُقدَّم مع سلطة البصل بالسماق.">Traditionelle Damaszener Kuppel-Kibbeh über Holzkohle gegrillt, serviert mit Zwiebel-Sumach-Salat und Dips.</p>
+                <p data-ar="كبة مشوية دمشقية على الفحم محشوة باللحم المفروم والمكسرات، تُقدَّم مع سلطة البصل بالسماق.">
+                  Traditionelle Damaszener Kuppel-Kibbeh über Holzkohle gegrillt, serviert mit Zwiebel-Sumach-Salat und
+                  Dips.</p>
                 <p class="dish-ingredients"><span class="ing-label" data-ar="المكوّنات:">Zutaten:</span> <span
-                    class="ing-value" data-ar="برغل، لحم مفروم، صنوبر، جوز، بهارات، بصل بالسماق">Bulgurteig, Hackfleisch, Pinienkerne, Walnüsse, Gewürze, Sumach-Zwiebeln</span></p>
+                    class="ing-value" data-ar="برغل، لحم مفروم، صنوبر، جوز، بهارات، بصل بالسماق">Bulgurteig,
+                    Hackfleisch, Pinienkerne, Walnüsse, Gewürze, Sumach-Zwiebeln</span></p>
               </div>
             </article>
 
@@ -600,9 +631,10 @@
           <div class="dish-grid">
 
             <article class="dish-card dish-card--sandwich">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="ساندويش فلافل">Falafel Sandwich</h3><span class="price">5,00 €</span>
+                  <h3 data-ar="ساندويش فلافل">Falafel Sandwich </h3><span class="price">5,00 €</span>
                 </div>
                 <p data-ar="كرات الفلافل المقرمشة في الخبز العربي مع الطحينة والسلطة والمخلل.">Knusprige Falafelbällchen
                   im arabischen Fladenbrot mit Tahini, Salat und Gewürzgurken.</p>
@@ -613,9 +645,10 @@
             </article>
 
             <article class="dish-card dish-card--sandwich">
+              <span class="diet-badge diet-badge--veg" data-tooltip="Vegetarisch" data-ar-tooltip="نباتي" aria-label="Vegetarisch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18l-9-9z" fill="rgba(255, 183, 77, 0.35)"/><path d="M3 13v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><circle cx="7.5" cy="17" r="1.2" fill="currentColor"/><circle cx="16.5" cy="16.5" r="1.5" fill="currentColor"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/><circle cx="12" cy="8.8" r="0.9" fill="currentColor"/></svg></span>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="ساندويش حلومي">Halloumi Sandwich</h3><span class="price">7,00 €</span>
+                  <h3 data-ar="ساندويش حلومي">Halloumi Sandwich </h3><span class="price">7,00 €</span>
                 </div>
                 <p data-ar="جبن حلومي مشوي مع الطماطم والخيار والنعناع في الخبز الدافئ.">Gegrillter Halloumi-Käse im
                   Fladenbrot mit Tomaten, Gurken und Minze.</p>
@@ -752,7 +785,8 @@
             </article>
 
             <article class="dish-card">
-              <div class="dish-img"><img src="assets/double-classic-burger.jpg" alt="Double Classic Burger" loading="lazy"></div>
+              <div class="dish-img"><img src="assets/double-classic-burger.jpg" alt="Double Classic Burger"
+                  loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
                   <h3 data-ar="كلاسيك دبل">Double Classic Burger</h3><span class="price">12,00 €</span>
@@ -789,7 +823,10 @@
 
           <div class="catering-intro">
             <span class="catering-intro-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v18M4 3c0 3 3 3 3 6s-3 3-3 6M20 3v18M20 8h-3a2 2 0 0 1-2-2V3M17 8v13"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 3v18M4 3c0 3 3 3 3 6s-3 3-3 6M20 3v18M20 8h-3a2 2 0 0 1-2-2V3M17 8v13" />
+              </svg>
             </span>
             <h3 data-ar="طلبيات خاصة والحفلات — للحجز والتنسيق هاتفيًا">Spezial-Bestellungen &amp; Catering</h3>
             <p data-ar="هذه الأطباق تُحضَّر بطلب مسبق فقط. يرجى الاتصال بنا للتنسيق وتحديد الموعد: 015752370848">
@@ -805,18 +842,19 @@
               <span class="bestseller-badge" data-ar="★ الأكثر طلباً">★ Beliebt</span>
               <div class="dish-img dish-swiper" id="mansafSwiper">
                 <div class="dish-swiper-track">
-                  <div class="dish-swiper-slide"><img src="assets/gallery/lamm-reis-tablett.jpg" alt="Mansaf" loading="eager"></div>
-                  <div class="dish-swiper-slide"><img src="assets/chicken-rice-1.jpg" alt="Mansaf" loading="lazy"></div>
-                  <div class="dish-swiper-slide"><img src="assets/chicken-rice-closeup.jpg" alt="Mansaf" loading="lazy"></div>
-                  <div class="dish-swiper-slide"><img src="assets/gallery/chicken-rice-macro.jpg" alt="Mansaf" loading="lazy"></div>
+                  <div class="dish-swiper-slide"><img src="assets/mansaf-lamm-studio.jpg" alt="Mansaf" loading="lazy">
+                  </div>
+                  <div class="dish-swiper-slide"><img src="assets/mansaf-haehnchen-studio.jpg" alt="Mansaf"
+                      loading="lazy">
+                  </div>
                 </div>
-                <button type="button" class="dish-swiper-arrow dish-swiper-prev" aria-label="Vorheriges Bild" data-ar-aria-label="الصورة السابقة">&#8249;</button>
-                <button type="button" class="dish-swiper-arrow dish-swiper-next" aria-label="Nächstes Bild" data-ar-aria-label="الصورة التالية">&#8250;</button>
+                <button type="button" class="dish-swiper-arrow dish-swiper-prev" aria-label="Vorheriges Bild"
+                  data-ar-aria-label="الصورة السابقة">&#8249;</button>
+                <button type="button" class="dish-swiper-arrow dish-swiper-next" aria-label="Nächstes Bild"
+                  data-ar-aria-label="الصورة التالية">&#8250;</button>
                 <div class="dish-swiper-dots">
-                  <button type="button" class="dish-swiper-dot is-active" aria-label="Bild 1"></button>
+                  <button type="button" class="dish-swiper-dot" aria-label="Bild 1"></button>
                   <button type="button" class="dish-swiper-dot" aria-label="Bild 2"></button>
-                  <button type="button" class="dish-swiper-dot" aria-label="Bild 3"></button>
-                  <button type="button" class="dish-swiper-dot" aria-label="Bild 4"></button>
                 </div>
               </div>
               <div class="dish-body">
@@ -831,15 +869,9 @@
             <article class="dish-card">
               <div class="dish-img dish-swiper" id="kibbehSwiper">
                 <div class="dish-swiper-track">
-                  <div class="dish-swiper-slide"><img src="assets/kibbeh-nayyeh.jpg" alt="Kibbeh Nayyeh" loading="eager"></div>
-                  <div class="dish-swiper-slide"><img src="assets/kibbeh-nayyeh-2.jpg" alt="Kibbeh Nayyeh" loading="lazy"></div>
-                </div>
-                <button type="button" class="dish-swiper-arrow dish-swiper-prev" aria-label="Vorheriges Bild" data-ar-aria-label="الصورة السابقة">&#8249;</button>
-                <button type="button" class="dish-swiper-arrow dish-swiper-next" aria-label="Nächstes Bild" data-ar-aria-label="الصورة التالية">&#8250;</button>
-                <div class="dish-swiper-dots">
-                  <button type="button" class="dish-swiper-dot is-active" aria-label="Bild 1"></button>
-                  <button type="button" class="dish-swiper-dot" aria-label="Bild 2"></button>
-                </div>
+                  <div class="dish-swiper-slide"><img src="assets/kibbeh-nayyeh-studio.jpg" alt="Kibbeh Nayyeh"
+                      loading="eager"></div>
+                 </div>
               </div>
               <div class="dish-body">
                 <div class="dish-head">
@@ -852,10 +884,11 @@
             </article>
 
             <article class="dish-card">
+              <span class="diet-badge diet-badge--vegan" data-tooltip="Vegan" data-ar-tooltip="نباتي صِرف" aria-label="Vegan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
               <div class="dish-img"><img src="assets/yalanji.jpg" alt="Yalanji" loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
-                  <h3 data-ar="يالنجي (بدءاً من 2 كيلو)">Yalanji (Gefüllte Weinblätter)</h3><span class="price">ab 2
+                  <h3 data-ar="يالنجي (بدءاً من 2 كيلو)">Yalanji (Gefüllte Weinblätter) </h3><span class="price">ab 2
                     kg</span>
                 </div>
                 <p data-ar="ورق عنب محشو بالأرز والخضار وزيت الزيتون ودبس الرمان.">Zarte Weinblätter gefüllt mit Reis,
@@ -864,7 +897,8 @@
             </article>
 
             <article class="dish-card">
-              <div class="dish-img"><img src="assets/manaqish-platten.jpg" alt="Manaqish & Gebäck-Platten" loading="lazy"></div>
+              <div class="dish-img"><img src="assets/manaqish-platten.jpg" alt="Manaqish & Gebäck-Platten"
+                  loading="lazy"></div>
               <div class="dish-body">
                 <div class="dish-head">
                   <h3 data-ar="مناقيش ومعجنات مشكلة">Manaqish &amp; Gebäck-Platten</h3><span class="price">auf
@@ -924,7 +958,8 @@
           </li>
           <li>
             <span class="contact-label" data-ar="أوقات العمل">Öffnungszeiten</span>
-            <span data-ar="الإثنين – السبت: 11:00 – 23:00 | الأحد: 12:00 – 22:00">Mo – Sa: 11:00 – 23:00 | So: 12:00 – 22:00 Uhr</span>
+            <span data-ar="الإثنين – السبت: 11:00 – 23:00 | الأحد: 12:00 – 22:00">Mo – Sa: 11:00 – 23:00 | So: 12:00 –
+              22:00 Uhr</span>
           </li>
         </ul>
       </div>
@@ -937,7 +972,8 @@
     <div class="footer-divider-rule"></div>
 
     <div class="wrap footer-bottom">
-      <p>© <span id="year"></span> <span data-ar="الشامي — مطبخ شرقي. جميع الحقوق محفوظة.">Schami — Orientalische Küche. Alle Rechte vorbehalten.</span></p>
+      <p>© <span id="year"></span> <span data-ar="الشامي — مطبخ شرقي. جميع الحقوق محفوظة.">Schami — Orientalische Küche.
+          Alle Rechte vorbehalten.</span></p>
       <p class="footer-fineprint" data-ar="المحتوى والعنوان وساعات العمل والأسعار توضيحية ويجب تعديلها قبل النشر.">
         Inhalte, Adresse, Öffnungszeiten und Preise sind beispielhaft und sollten vor Veröffentlichung angepasst werden.
       </p>

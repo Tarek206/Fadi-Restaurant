@@ -29,6 +29,16 @@ function applyLanguage(lang) {
     el.setAttribute('aria-label', lang === 'ar' ? el.dataset.arAriaLabel : el.dataset.deAriaLabel);
   });
 
+  
+  document.querySelectorAll('.diet-badge[data-tooltip]').forEach(el => {
+    if (!el.dataset.deTooltip) el.dataset.deTooltip = el.getAttribute('data-tooltip') || '';
+    if (lang === 'ar') {
+      if (el.dataset.arTooltip) el.setAttribute('data-tooltip', el.dataset.arTooltip);
+    } else {
+      if (el.dataset.deTooltip) el.setAttribute('data-tooltip', el.dataset.deTooltip);
+    }
+  });
+
   document.querySelectorAll('.lang-switch').forEach(sw => sw.setAttribute('data-active', lang));
   localStorage.setItem(LANG_KEY, lang);
 }
