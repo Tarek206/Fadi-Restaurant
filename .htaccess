@@ -1,0 +1,11 @@
+# Saubere URLs ohne index.html für schami-leipzig.de
+DirectoryIndex index.php index.html default.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Wenn jemand direkt /index.html aufruft, auf / umleiten (301)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
